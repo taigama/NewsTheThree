@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">News the Three</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="choose_category">Chọn danh mục</string>
+    <string name="category">Danh mục</string>
+    <string-array name="categories">
+        <item>Thời sự</item>
+        <item>Thế giới</item>
+        <item>Pháp luật</item>
+        <item>Kinh doanh</item>
+        <item>Công nghệ</item>
+        <item>xe</item>
+        <item>Du lịch</item>
+        <item>Nhịp sống trẻ</item>
+        <item>Văn hóa</item>
+        <item>Giải trí</item>
+        <item>Thể thao</item>
+        <item>Giáo dục</item>
+        <item>Khoa học</item>
+        <item>Sức khỏe</item>
+        <item>Thư giãn</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="drawer_open">It\'s OPEN!</string>
+    <string name="drawer_close">IT\'s WAS CLOSED! fuck</string>
+</resources>
