@@ -19,17 +19,17 @@
         android:paddingBottom="@dimen/news_list_space"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum = "2">
+        android:weightSum = "5">
         <ImageView
             android:id="@+id/news_image"
             android:layout_width="0dp"
             android:layout_height="100dp"
             app:srcCompat="@drawable/ava"
-            android:layout_weight="1"/>
+            android:layout_weight="2"/>
 
 
         <RelativeLayout
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:layout_width="0dp"
             android:layout_height="match_parent">
 
@@ -46,8 +46,7 @@
                 android:paddingRight="@dimen/news_list_content_padding"
                 android:text="Đập chai vô đối!"
                 android:layout_alignTop="@id/container"
-                android:textSize="@dimen/news_list_title_size"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/news_category"

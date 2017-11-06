@@ -31,38 +31,9 @@ public class HomeFragment extends Fragment {
 
         // Initialize dataset, this data would usually come from a local content provider or
         // remote server.
-        FakeDataSet();
-    }
+        // FakeDataSet();
 
-    private void FakeDataSet() {
-        mNewItems = new ArrayList<>();
-
-        mNewItems.add(new ItemNewsList("Vào lúc 3 giờ sáng hôm nay (20/10), siêu bão Conga bắt đầu đổ bộ vào đất liền"
-                , "Tin giờ chót"
-                , "Siêu bão Conga mạnh cấp 20, gió giật cấp 20, vùng gần tâm bão giật cấp 20*10 đang tàn phá khắp mọi miền đất nước"
-                , R.drawable.ava2, ItemNewsList.TYPE.HEAD));
-
-        int i = 1;
-        mNewItems.add(new ItemNewsList("Tin thứ " + (++i), "Tin mới khác"
-                , "", R.drawable.ava, ItemNewsList.TYPE.TAIL));
-        mNewItems.add(new ItemNewsList("Tin thứ " + (++i), "Tin mới khác"
-                , "", R.drawable.ava, ItemNewsList.TYPE.TAIL));
-        mNewItems.add(new ItemNewsList("Tin thứ " + (++i), "Tin mới khác"
-                , "", R.drawable.ava, ItemNewsList.TYPE.TAIL));
-        mNewItems.add(new ItemNewsList("Tin thứ " + (++i), "Tin mới khác"
-                , "", R.drawable.ava, ItemNewsList.TYPE.TAIL));
-        mNewItems.add(new ItemNewsList("Tin thứ " + (++i), "Tin mới khác"
-                , "", R.drawable.ava, ItemNewsList.TYPE.TAIL));
-        mNewItems.add(new ItemNewsList("Tin thứ " + (++i), "Tin mới khác"
-                , "", R.drawable.ava, ItemNewsList.TYPE.TAIL));
-        mNewItems.add(new ItemNewsList("Tin thứ " + (++i), "Tin mới khác"
-                , "", R.drawable.ava, ItemNewsList.TYPE.TAIL));
-        mNewItems.add(new ItemNewsList("Tin thứ " + (++i), "Tin mới khác"
-                , "", R.drawable.ava, ItemNewsList.TYPE.TAIL));
-        mNewItems.add(new ItemNewsList("Tin thứ " + (++i), "Tin mới khác"
-                , "", R.drawable.ava, ItemNewsList.TYPE.TAIL));
-        mNewItems.add(new ItemNewsList("Tin thứ " + (++i), "Tin mới khác"
-                , "", R.drawable.ava, ItemNewsList.TYPE.TAIL));
+        //mNewItems = new ArrayList<>();
     }
 
     @Override
@@ -87,13 +58,20 @@ public class HomeFragment extends Fragment {
         mRecyclerView.setAdapter(mAdapter);
 
 
-
-
-
-
-
-
         return rootView;
     }
+
+    public void addData(String title, String category, String overview, int idImage, ItemNewsList.TYPE type) {
+        if(mNewItems == null)
+            mNewItems = new ArrayList<>();
+
+        mNewItems.add(new ItemNewsList(title, category, overview, idImage, type));
+    }
+
+    public void NotifyDataSetChanged() {
+        if(mAdapter != null)
+            mAdapter.notifyDataSetChanged();
+    }
+
 
 }

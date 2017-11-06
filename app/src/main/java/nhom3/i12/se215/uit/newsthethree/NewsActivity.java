@@ -3,6 +3,7 @@ package nhom3.i12.se215.uit.newsthethree;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.View;
 
 public class NewsActivity extends AppCompatActivity {
@@ -29,6 +30,13 @@ public class NewsActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_news, menu);
+
+        return true;
     }
 
 }
