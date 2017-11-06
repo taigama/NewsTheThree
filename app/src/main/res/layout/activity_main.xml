@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -51,57 +52,101 @@
 
     <!-- Profile Box -->
 
-        <RelativeLayout
+        <FrameLayout
             android:id="@+id/profileBox"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="75dp"
             android:background="#0000"
-            android:padding="8dp" >
+            android:padding="8dp"/>
 
-            <ImageView
-                android:id="@+id/avatar"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@mipmap/ic_launcher"
-                android:layout_marginTop="15dp" />
+        <RelativeLayout
+            android:id="@+id/panel_menu"
+            android:layout_below="@+id/profileBox"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:background="#FFF">
+            <LinearLayout
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/news_list_content_padding"
+                android:paddingRight="@dimen/news_list_content_padding">
+
+                <EditText
+                    android:id="@+id/txt_menu_search"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="tìm kiếm gì đó..." />
+
+                <ImageView
+                    android:id="@+id/btn_menu_search"
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_search"/>
+            </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="42dp"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="15dp"
-                android:layout_toRightOf="@+id/avatar"
-                android:orientation="vertical" >
-
+                android:id="@+id/item_menu_bookmark"
+                android:layout_above="@id/item_menu_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/news_list_content_padding"
+                android:paddingRight="@dimen/news_list_content_padding">
                 <TextView
-                    android:id="@+id/userName"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Tin đã lưu..."
                     android:layout_height="wrap_content"
-                    android:text="Rishabh"
-                    android:textColor="#fff"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/news_list_title_size"
+                    android:background="@drawable/border_comment"
+                    android:paddingLeft="@dimen/news_list_content_padding"
+                    android:paddingRight="@dimen/news_list_content_padding"
+                    android:paddingTop="@dimen/news_list_content_padding"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:layout_marginBottom="@dimen/news_list_content_padding"
+                    android:layout_marginTop="@dimen/news_list_content_padding"
+                    android:layout_marginRight="@dimen/news_list_content_padding"/>
 
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_star"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/item_menu_about"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/news_list_content_padding"
+                android:paddingRight="@dimen/news_list_content_padding">
                 <TextView
-                    android:id="@+id/desc"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Về chúng tôi..."
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginTop="4dp"
-                    android:text="View Profile"
-                    android:textColor="#fff"
-                    android:textSize="12sp" />
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/news_list_title_size"
+                    android:background="@drawable/border_comment"
+                    android:paddingLeft="@dimen/news_list_content_padding"
+                    android:paddingRight="@dimen/news_list_content_padding"
+                    android:paddingTop="@dimen/news_list_content_padding"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:layout_marginBottom="@dimen/news_list_content_padding"
+                    android:layout_marginTop="@dimen/news_list_content_padding"
+                    android:layout_marginRight="@dimen/news_list_content_padding"/>
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_info"/>
             </LinearLayout>
 
         </RelativeLayout>
-        <!-- List of Actions (pages) -->
-        <ListView
-            android:id="@+id/navList"
-            android:layout_width="280dp"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/profileBox"
-            android:choiceMode="singleChoice"
-            android:background="#ffffffff" />
 
     </RelativeLayout>
 </android.support.v4.widget.DrawerLayout>

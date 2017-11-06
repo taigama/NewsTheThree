@@ -39,7 +39,7 @@ public class HomeFragment extends Fragment {
 
         mNewItems.add(new ItemNewsList("Vào lúc 3 giờ sáng hôm nay (20/10), siêu bão Conga bắt đầu đổ bộ vào đất liền"
                 , "Tin giờ chót"
-                , "Siêu bão Conga mạnh cấp 20, gió giật cấp 20, vùng gần tâm bão giật cấp 20*10 đang tàn phá khắp mọi miền quê"
+                , "Siêu bão Conga mạnh cấp 20, gió giật cấp 20, vùng gần tâm bão giật cấp 20*10 đang tàn phá khắp mọi miền đất nước"
                 , R.drawable.ava2, ItemNewsList.TYPE.HEAD));
 
         int i = 1;

@@ -2,6 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,22 +27,24 @@
         android:layout_marginLeft="@dimen/news_list_content_padding"
         android:layout_marginTop="@dimen/news_list_content_padding"
         android:layout_marginBottom="@dimen/news_list_content_padding"/>
+
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="398dp"
         android:layout_gravity="fill_vertical"
-        android:background="@drawable/border_comment"
         android:layout_marginLeft="@dimen/news_list_content_padding"
-        android:layout_marginRight="@dimen/news_list_content_padding">
+        android:layout_marginRight="@dimen/news_list_content_padding"
+        android:layout_marginBottom="@dimen/news_list_content_padding"
+        android:layout_weight="1"
+        android:background="@drawable/border_comment">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:textSize="@dimen/news_list_title_size"
             android:text="@string/about"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textSize="@dimen/news_list_title_size" />
     </FrameLayout>
 
 </LinearLayout>

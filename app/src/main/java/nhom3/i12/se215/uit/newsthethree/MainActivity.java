@@ -1,6 +1,7 @@
 package nhom3.i12.se215.uit.newsthethree;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -28,8 +29,8 @@ import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -45,12 +46,16 @@ public class MainActivity extends AppCompatActivity {
     private static String TAG = MainActivity.class.getSimpleName();
 
     // region HAMBURGER
-    ListView mDrawerList;
     RelativeLayout mDrawerPane;
     private ActionBarDrawerToggle mDrawerToggle;
     private DrawerLayout mDrawerLayout;
 
-    ArrayList<NavItem> mNavItems = new ArrayList<>();
+    View mPnMenu;
+    EditText mTxtSearch;
+    View mBtnSearch;
+    View mBtnBookmark;
+    View mBtnAbout;
+
 
     // endregion
 
@@ -83,26 +88,12 @@ public class MainActivity extends AppCompatActivity {
         // endregion
 
         // region HAMBURGER
-        mNavItems.add(new NavItem("The First", "ahaha", R.drawable.ic_action_menu));
-        mNavItems.add(new NavItem("The Sec_d", "fuck second", R.drawable.ic_action_menu));
-        mNavItems.add(new NavItem("The THIRD", "lol third", R.drawable.ic_action_menu));
 
         // drawer layout
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
 
         // populate Navigation Drawer with options
         mDrawerPane = (RelativeLayout) findViewById(R.id.drawerPane);
-        mDrawerList = (ListView) findViewById(R.id.navList);
-        DrawerListAdapter drawerListAdapter = new DrawerListAdapter(this, mNavItems);
-        mDrawerList.setAdapter(drawerListAdapter);
-
-        // drawer items click listener
-        mDrawerList.setOnItemClickListener( new AdapterView.OnItemClickListener(){
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                selectItemFromDrawer(position);
-            }
-        });
 
         Toolbar myToolbar = (Toolbar)findViewById(R.id.toolBar);
 
@@ -125,6 +116,28 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
+        mPnMenu = (View)findViewById(R.id.panel_menu);
+        mTxtSearch = (EditText)findViewById(R.id.txt_menu_search);
+        mBtnSearch = (View) findViewById(R.id.btn_menu_search);
+        mBtnBookmark = (View)findViewById(R.id.item_menu_bookmark);
+        mBtnAbout = (View)findViewById(R.id.item_menu_about);
+
+        mPnMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        mBtnAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context context = view.getContext();
+                Intent intent = new Intent(context, AboutActivity.class);
+                context.startActivity(intent);
+            }
+        });
+
         // endregion
 
         // region MENU
@@ -135,19 +148,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // region HAMBURGER
-    private void selectItemFromDrawer(int position) {
-        Fragment fragment = new PreferencesFragment();
 
-        //FragmentManager fragmentManager = getFragmentManager();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.mainContent,fragment).commit();
-
-        mDrawerList.setItemChecked(position, true);
-        setTitle(mNavItems.get(position).mTitle);
-
-        // close the drawer
-        mDrawerLayout.closeDrawer(mDrawerPane);
-    }
 
 
 
