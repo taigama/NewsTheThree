@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/news_item_box"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/news_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/ava" />
+    <TextView
+        android:id="@+id/news_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đây là tin tức vô cùng hót"
+        android:textStyle="bold"
+        android:textSize="@dimen/news_list_title_size"
+        android:paddingTop="@dimen/news_list_content_padding"
+        android:paddingLeft="@dimen/news_list_content_padding"
+        android:paddingRight="@dimen/news_list_content_padding"/>
+    <TextView
+        android:id="@+id/news_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorAccent"
+        android:paddingLeft="@dimen/news_list_content_padding"
+        android:paddingRight="@dimen/news_list_content_padding"
+        android:text="Thời sự"/>
+    <TextView
+        android:id="@+id/news_overview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/news_list_content_padding"
+        android:paddingRight="@dimen/news_list_content_padding"
+        android:paddingTop="@dimen/news_list_content_padding"
+        android:paddingBottom="@dimen/news_list_content_padding"
+        android:text="Bà con mau đến xem! Độ hót nhiều không thể tả. Phải đấy! Cực kỳ hót. Không những hót 1 lần, mà còn hót qua năm tháng. "/>
+</LinearLayout>

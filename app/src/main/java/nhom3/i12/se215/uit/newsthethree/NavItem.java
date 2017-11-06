@@ -1,8 +1,5 @@
 package nhom3.i12.se215.uit.newsthethree;
 
-/**
- * Created by taiga on 10/16/2017.
- */
 
 public class NavItem{
     String mTitle;

@@ -1,3 +1,5 @@
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="news_list_space">7dp</dimen>
+    <dimen name="news_list_content_padding">10dp</dimen>
+    <dimen name="news_list_title_size">18sp</dimen>
 </resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_comment_inner"
+        android:text="Về chúng tôi"
+        android:textColor="@color/colorPrimary"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        android:layout_marginRight="@dimen/news_list_content_padding"
+        android:layout_marginLeft="@dimen/news_list_content_padding"
+        android:layout_marginTop="@dimen/news_list_content_padding"
+        android:layout_marginBottom="@dimen/news_list_content_padding"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="fill_vertical"
+        android:background="@drawable/border_comment"
+        android:layout_marginLeft="@dimen/news_list_content_padding"
+        android:layout_marginRight="@dimen/news_list_content_padding">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/news_list_title_size"
+            android:text="@string/about"
+            android:textAlignment="center" />
+    </FrameLayout>
+
+</LinearLayout>

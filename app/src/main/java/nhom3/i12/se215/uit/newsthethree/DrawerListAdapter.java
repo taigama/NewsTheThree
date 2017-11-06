@@ -10,9 +10,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by taiga on 10/16/2017.
- */
 
 public class DrawerListAdapter extends BaseAdapter {
     Context mContext;

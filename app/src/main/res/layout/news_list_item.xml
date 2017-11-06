@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/news_item_box"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:paddingLeft="@dimen/news_list_content_padding"
+        android:paddingRight="@dimen/news_list_content_padding"
+        app:srcCompat="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:paddingTop="@dimen/news_list_space"
+        android:paddingBottom="@dimen/news_list_space"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum = "2">
+        <ImageView
+            android:id="@+id/news_image"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/ava"
+            android:layout_weight="1"/>
+
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/news_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/news_list_content_padding"
+                android:paddingRight="@dimen/news_list_content_padding"
+                android:text="Đập chai vô đối!"
+                android:layout_alignTop="@id/container"
+                android:textSize="@dimen/news_list_title_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/news_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/news_list_content_padding"
+                android:paddingRight="@dimen/news_list_content_padding"
+                android:layout_alignBottom="@id/container"
+                android:text="Tin tức xã hội"
+                android:textColor="@color/colorAccent" />
+            <TextView
+            android:id="@+id/news_overview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

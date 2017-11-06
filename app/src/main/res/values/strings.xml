@@ -25,4 +25,27 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="drawer_open">It\'s OPEN!</string>
     <string name="drawer_close">IT\'s WAS CLOSED! fuck</string>
+    <string name="earth_content"> Tại sao tất cả mọi thứ trong Hệ Mặt Trời đều quay? Và tại sao hầu hết mọi chuyển động quay đều có cùng một hướng?
+\n Điều này không thể là ngẫu nhiên được. Nhìn xuống Trái Đất từ phía trên, và bạn sẽ thấy nó quay ngược chiều kim đồng hồ. Cũng tương tự với Mặt Trời, Sao Hỏa và các hành tinh khác.
+\n 4.54 tỷ năm trước, Hệ Mặt Trời của chúng ta hình thành bên trong một đám mây hydro, đám mây này khác với tinh vân Orion hay tinh vân Đại Bang với những đường ống tuyệt vời của tạo hóa.
+\n Sau đó, nó cần một vài tác động, chẳng hạn như những sóng xung kích từ một siêu tân tinh gần đó, và điều này tạo ra một khu vực khí lạnh dồn vào bên trong thông qua lực hấp dẫn của chúng. Khi nó đã co lại, đám mây bắt đầu quay.
+    </string>
+    <string name="earth_content_2"> Hãy nghĩ về một cá thể phân tử trong đám mây Hydro. Mỗi hạt mang động lượng riêng của nó và trôi đi trong không gian. Khi những phân tử này kết hợp với phân tử khác bởi trọng lực, chúng cần phải cân bằng động lượng của mỗi hạt. Khả năng cân bằng hoàn hảo bằng 0 là có thể xảy ra, nhưng thực sự rất khó.
+\n Có nghĩa là, một số trong số chúng sẽ trượt qua nhau. Giống như những người trượt băng nghệ thuật cầm tay kéo nhau để quay nhanh hơn, sự co lại của tinh vân tiền Mặt Trời với động lượng của các hạt cân bằng của nó trở nên quay nhanh hơn.
+\n Đây chính là lúc bảo toàn động lượng quay bắt đầu có tác động
+\n Khi Hệ Mặt Trời quay càng nhanh, nó bị dẹt ra thành một đĩa với một khu vực phình ở giữa. Chúng ta thấy cấu trúc tương tự ở khắp nơi trong vũ trụ: Hình dáng của các thiên hà, xung quanh các lỗ đen đang quay...
+\n Mặt Trời hình thành từ chỗ phình ở tâm chiếc đĩa này, và các hành tinh hình thành bên ngoài. Chúng thừa hưởng chuyển động quay từ chuyển động tổng thể của bản thân Hệ Mặt Trời.
+\n Trong suốt một vài trăm triệu năm, tất cả vật chất trong Hệ Mặt Trời tập trung lại với nhau thành các hành tinh, tiểu hành tinh, mặt trăng và sao chổi... Sau đó bức xạ mạnh và gió sao từ ngôi sao trẻ Mặt Trời thổi sạch những thứ còn lại khác.
+\n Không có bất kỳ lực không cân bằng nào khác tác động lên chúng, nên quán tính của Mặt Trời và các hành tinh đã giữ chúng quay trong hàng tỷ năm qua.
+\n Và chúng sẽ tiếp tục quay cho đến khi chúng va chạm với các vật thể khác, hàng tỷ hoặc thậm chí hàng nghìn tỷ năm sau trong tương lai.
+</string>
+    <string name="comment_thank">Bài viết này rất hay, cám ơn tác giả nhé!\n\n p/s: Tôi thấy người làm app này rất là đẹp chai.</string>
+    <string name="n">\n</string>
+    <string name="about">Trường Đại học Công nghệ Thông tin
+\nĐại học quốc gia TP Hồ Chí Minh
+\n\nMôn: Giao tiếp người - máy
+\nGiảng viên hướng dẫn:
+\nNguyễn Công Hoan
+\n\nNhóm bao nhiêu quên rồi
+    </string>
 </resources>
