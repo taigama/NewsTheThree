@@ -41,11 +41,19 @@
 </string>
     <string name="comment_thank">Bài viết này rất hay, cám ơn tác giả nhé!\n\n p/s: Tôi thấy người làm app này rất là đẹp chai.</string>
     <string name="n">\n</string>
-    <string name="about">Trường Đại học Công nghệ Thông tin
-\nĐại học quốc gia TP Hồ Chí Minh
-\n\nMôn: Giao tiếp người - máy
-\nGiảng viên hướng dẫn:
-\nNguyễn Công Hoan
-\n\nNhóm bao nhiêu quên rồi
+    <string name="about_title">Khoa Công nghệ Phần mềm
+        \nGiao tiếp người - máy
+        \nSE215.I12\n\n
+    </string>
+    <string name="about_lecturer">
+        \nGiảng viên hướng dẫn:
+        \nNguyễn Công Hoan
+    </string>
+    <string name="about_team">
+        \nNhóm 3:
+        \nNguyễn Phương Nguyên - 14520601
+        \nNguyễn Thanh Nam - 14520556
+        \nĐinh Hoàng Khang - 14520404
+        \n
     </string>
 </resources>

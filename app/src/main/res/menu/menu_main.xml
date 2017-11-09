@@ -6,6 +6,9 @@
     >
 
     <item
+        android:checkable="false"
+        android:checked="false"
+        android:enabled="false"
         android:title=" "
         app:showAsAction="always" />
 </menu>

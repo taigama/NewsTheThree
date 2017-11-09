@@ -21,7 +21,7 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             android:id="@+id/appBarLayout">
             <include
-                android:layout_height="wrap_content"
+                android:layout_height="75dp"
                 android:layout_width="match_parent"
                 layout= "@layout/toolbar_layout"
                 />
@@ -49,19 +49,21 @@
     android:layout_height="match_parent"
     android:id="@+id/drawerPane"
     android:layout_gravity="start">
-
-    <!-- Profile Box -->
-
         <FrameLayout
-            android:id="@+id/profileBox"
-            android:layout_width="match_parent"
+            android:id="@+id/title_menu"
+            android:layout_width="280dp"
             android:layout_height="75dp"
-            android:background="#0000"
-            android:padding="8dp"/>
+            android:background="@color/colorPrimary">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/title"
+                android:layout_margin="@dimen/news_list_content_padding"/>
+        </FrameLayout>
 
         <RelativeLayout
             android:id="@+id/panel_menu"
-            android:layout_below="@+id/profileBox"
+            android:layout_below="@+id/title_menu"
             android:layout_width="280dp"
             android:layout_height="match_parent"
             android:background="#FFF">
@@ -69,21 +71,27 @@
                 android:layout_alignParentTop="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/news_list_content_padding"
+                android:layout_marginLeft="@dimen/news_list_content_padding"
+                android:layout_marginRight="@dimen/news_list_content_padding"
                 android:paddingLeft="@dimen/news_list_content_padding"
-                android:paddingRight="@dimen/news_list_content_padding">
+                android:paddingRight="@dimen/news_list_content_padding"
+                android:background="@drawable/border_search">
 
                 <EditText
                     android:id="@+id/txt_menu_search"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:hint="tìm kiếm gì đó..." />
+                    android:textAlignment="center"
+                    android:hint="nhập từ khoá"
+                    android:background="#0000"/>
 
                 <ImageView
                     android:id="@+id/btn_menu_search"
                     android:layout_width="32dp"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_search"/>
+                    app:srcCompat="@drawable/ic_search_blue"/>
             </LinearLayout>
 
             <LinearLayout
@@ -93,15 +101,17 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/news_list_content_padding"
                 android:paddingRight="@dimen/news_list_content_padding">
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_star"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:text="Tin đã lưu..."
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
                     android:textStyle="bold"
                     android:textSize="@dimen/news_list_title_size"
-                    android:background="@drawable/border_comment"
                     android:paddingLeft="@dimen/news_list_content_padding"
                     android:paddingRight="@dimen/news_list_content_padding"
                     android:paddingTop="@dimen/news_list_content_padding"
@@ -109,11 +119,6 @@
                     android:layout_marginBottom="@dimen/news_list_content_padding"
                     android:layout_marginTop="@dimen/news_list_content_padding"
                     android:layout_marginRight="@dimen/news_list_content_padding"/>
-
-                <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_star"/>
             </LinearLayout>
 
             <LinearLayout
@@ -123,15 +128,17 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/news_list_content_padding"
                 android:paddingRight="@dimen/news_list_content_padding">
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_info"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:text="Về chúng tôi..."
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
                     android:textStyle="bold"
                     android:textSize="@dimen/news_list_title_size"
-                    android:background="@drawable/border_comment"
                     android:paddingLeft="@dimen/news_list_content_padding"
                     android:paddingRight="@dimen/news_list_content_padding"
                     android:paddingTop="@dimen/news_list_content_padding"
@@ -139,11 +146,6 @@
                     android:layout_marginBottom="@dimen/news_list_content_padding"
                     android:layout_marginTop="@dimen/news_list_content_padding"
                     android:layout_marginRight="@dimen/news_list_content_padding"/>
-
-                <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_info"/>
             </LinearLayout>
 
         </RelativeLayout>

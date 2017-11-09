@@ -9,14 +9,12 @@
     android:fitsSystemWindows="true"
     android:id="@+id/toolBar"
     app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-    tools:context=".MainActivity"
-    >
+    tools:context=".MainActivity" >
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:paddingTop="15dp"
-        android:paddingBottom="5dp"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/news_list_content_padding"
         app:srcCompat="@drawable/title" />
 
 </android.support.v7.widget.Toolbar>

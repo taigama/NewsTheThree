@@ -22,15 +22,53 @@
         android:paddingTop="@dimen/news_list_content_padding"
         android:paddingLeft="@dimen/news_list_content_padding"
         android:paddingRight="@dimen/news_list_content_padding"/>
-    <TextView
-        android:id="@+id/news_category"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="textEnd"
-        android:textColor="@color/colorAccent"
-        android:paddingLeft="@dimen/news_list_content_padding"
-        android:paddingRight="@dimen/news_list_content_padding"
-        android:text="Thời sự"/>
+        android:paddingLeft="@dimen/news_list_content_padding">
+
+        <ImageView
+            android:id="@+id/img_comment"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            app:srcCompat="@drawable/ic_comment_blue"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/txt_comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 6 "
+            android:textColor="@color/colorAccent"
+            app:layout_constraintStart_toEndOf="@id/img_comment"/>
+        <TextView
+            android:id="@+id/txt_separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" | "
+            app:layout_constraintStart_toEndOf="@id/txt_comment_count"/>
+        <ImageView
+            android:id="@+id/img_like"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            app:srcCompat="@drawable/ic_like_empty"
+            app:layout_constraintStart_toEndOf="@id/txt_separator"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 3"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintStart_toEndOf="@id/img_like"/>
+        <TextView
+            android:id="@+id/news_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:paddingLeft="@dimen/news_list_content_padding"
+            android:paddingRight="@dimen/news_list_content_padding"
+            android:text="Thời sự"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+
     <TextView
         android:id="@+id/news_overview"
         android:layout_width="match_parent"

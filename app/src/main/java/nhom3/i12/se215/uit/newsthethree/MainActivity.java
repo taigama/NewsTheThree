@@ -150,7 +150,18 @@ public class MainActivity extends AppCompatActivity {
         mBtnBookmark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //
+                Context context = view.getContext();
+                Intent intent = new Intent(context, BookmarkActivity.class);
+                context.startActivity(intent);
+            }
+        });
+
+        mBtnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context context = view.getContext();
+                Intent intent = new Intent(context, SearchActivity.class);
+                context.startActivity(intent);
             }
         });
 
@@ -192,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
         // region HOME
         mFragmentHome.addData("Vào lúc 3 giờ sáng hôm nay (20/10), siêu bão Conga bắt đầu đổ bộ vào đất liền"
                 , "Tin giờ chót"
-                , "Siêu bão Conga mạnh cấp 20, gió giật cấp 20, vùng gần tâm bão giật cấp 20*10 đang tàn phá khắp mọi miền đất nước"
+                , "Siêu bão Conga mạnh cấp 20, gió giật cấp 20, vùng gần tâm bão giật cấp 25 đang tàn phá khắp mọi miền đất nước"
                 , R.drawable.news_sieubao, ItemNewsList.TYPE.HEAD);
 
         mFragmentHome.addData("Một lần nữa Apple phải hướng dẫn cách sử dụng iPhone"

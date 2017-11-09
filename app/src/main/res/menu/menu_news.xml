@@ -6,11 +6,11 @@
     >
 
     <item
-        android:icon="@drawable/ic_comment"
+        android:icon="@drawable/ic_comment_white"
         android:title="Go to comments"
         app:showAsAction="always" />
     <item
-        android:icon="@drawable/ic_star"
+        android:icon="@drawable/ic_star_white"
         android:title="Bookmark this"
         app:showAsAction="always" />
 </menu>

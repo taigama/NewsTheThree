@@ -73,5 +73,17 @@ public class HomeFragment extends Fragment {
             mAdapter.notifyDataSetChanged();
     }
 
+    public void ClearData()
+    {
+        if(mNewItems == null)
+            mNewItems = new ArrayList<>();
+        else
+            mNewItems.clear();
+    }
+
+    public void ScrollDown()
+    {
+        mRecyclerView.scrollBy(0, 100);
+    }
 
 }

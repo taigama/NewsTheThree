@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar_about"
@@ -11,40 +13,58 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar_about"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
+            android:layout_height="75dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                app:srcCompat="@drawable/title"
+                android:layout_margin="@dimen/news_list_content_padding"/>
         </android.support.v7.widget.Toolbar>
+
     </android.support.design.widget.AppBarLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/border_comment_inner"
-        android:text="Về chúng tôi"
-        android:textColor="@color/colorPrimary"
-        android:textAlignment="center"
-        android:textSize="32sp"
-        android:layout_marginRight="@dimen/news_list_content_padding"
-        android:layout_marginLeft="@dimen/news_list_content_padding"
-        android:layout_marginTop="@dimen/news_list_content_padding"
-        android:layout_marginBottom="@dimen/news_list_content_padding"/>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="398dp"
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_gravity="fill_vertical"
-        android:layout_marginLeft="@dimen/news_list_content_padding"
-        android:layout_marginRight="@dimen/news_list_content_padding"
-        android:layout_marginBottom="@dimen/news_list_content_padding"
         android:layout_weight="1"
-        android:background="@drawable/border_comment">
+        android:background="@drawable/border_comment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_about"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/news_list_content_padding">
 
-        <TextView
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="@string/about"
-            android:textAlignment="center"
-            android:textSize="@dimen/news_list_title_size" />
-    </FrameLayout>
+            android:paddingLeft="@dimen/news_list_content_padding"
+            android:paddingRight="@dimen/news_list_content_padding">
+            <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/banner"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_title"
+                android:textAlignment="center"
+                android:textSize="@dimen/news_list_title_size" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_lecturer"
+                android:textAlignment="textStart"
+                android:textSize="@dimen/news_list_title_size" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_team"
+                android:textAlignment="textEnd"
+                android:textSize="@dimen/news_list_title_size"/>
+        </LinearLayout>
+    </ScrollView>
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -33,98 +33,105 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/news_title"
+            <LinearLayout
+                android:id="@+id/news_entire_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/news_list_content_padding"
-                android:paddingLeft="@dimen/news_list_content_padding"
-                android:paddingRight="@dimen/news_list_content_padding"
-                android:paddingTop="@dimen/news_list_content_padding"
-                android:text="Tại sao trái đất lại xoay?"
-                android:textSize="@dimen/news_list_title_size"
-                android:textStyle="bold" />
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/news_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:paddingLeft="@dimen/news_list_content_padding"
+                    android:paddingRight="@dimen/news_list_content_padding"
+                    android:paddingTop="@dimen/news_list_content_padding"
+                    android:text="Tại sao trái đất lại xoay?"
+                    android:textSize="@dimen/news_list_title_size"
+                    android:textStyle="bold" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/news_list_content_padding"
-                android:paddingLeft="@dimen/news_list_content_padding"
-                android:paddingRight="@dimen/news_list_content_padding">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:paddingLeft="@dimen/news_list_content_padding"
+                    android:paddingRight="@dimen/news_list_content_padding">
+
+                    <ImageView
+                        android:id="@+id/wrap_below_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp" />
+
+                    <TextView
+                        android:id="@+id/news_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/wrap_below_title"
+                        android:text="16/9/2016" />
+
+                    <TextView
+                        android:id="@+id/news_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@id/wrap_below_title"
+                        android:text="Em yêu khoa học"
+                        android:textColor="@color/colorAccent" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:paddingLeft="@dimen/news_list_content_padding"
+                    android:paddingRight="@dimen/news_list_content_padding"
+                    android:paddingTop="@dimen/news_list_content_padding"
+                    android:text="@string/earth_content" />
 
                 <ImageView
-                    android:id="@+id/wrap_below_title"
+                    android:id="@+id/news_image"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp" />
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:paddingTop="@dimen/news_list_content_padding"
+                    app:srcCompat="@drawable/earth_from_space" />
 
                 <TextView
-                    android:id="@+id/news_time"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@id/wrap_below_title"
-                    android:text="16/9/2016" />
+                    android:text="Trái đất nhìn từ vệ tinh"
+                    android:textAlignment="center"
+                    android:textColor="#555555" />
 
                 <TextView
-                    android:id="@+id/news_category"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignEnd="@id/wrap_below_title"
-                    android:text="Em yêu khoa học"
-                    android:textColor="@color/colorAccent" />
-            </RelativeLayout>
+                    android:paddingLeft="@dimen/news_list_content_padding"
+                    android:paddingRight="@dimen/news_list_content_padding"
+                    android:paddingTop="@dimen/news_list_content_padding"
+                    android:text="Do bảo toàn động lượng quay"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/news_list_content_padding"
-                android:paddingLeft="@dimen/news_list_content_padding"
-                android:paddingRight="@dimen/news_list_content_padding"
-                android:paddingTop="@dimen/news_list_content_padding"
-                android:text="@string/earth_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:paddingLeft="@dimen/news_list_content_padding"
+                    android:paddingRight="@dimen/news_list_content_padding"
+                    android:paddingTop="@dimen/news_list_content_padding"
+                    android:text="@string/earth_content_2" />
 
-            <ImageView
-                android:id="@+id/news_image"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:paddingBottom="@dimen/news_list_content_padding"
-                android:paddingTop="@dimen/news_list_content_padding"
-                app:srcCompat="@drawable/earth_from_space" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:paddingLeft="@dimen/news_list_content_padding"
+                    android:paddingRight="@dimen/news_list_content_padding"
+                    android:text="ThS. Phan Thanh Hiền (Tổng hợp)"
+                    android:textAlignment="textEnd"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Trái đất nhìn từ vệ tinh"
-                android:textAlignment="center"
-                android:textColor="#555555" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/news_list_content_padding"
-                android:paddingRight="@dimen/news_list_content_padding"
-                android:paddingTop="@dimen/news_list_content_padding"
-                android:text="Do bảo toàn động lượng quay"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/news_list_content_padding"
-                android:paddingLeft="@dimen/news_list_content_padding"
-                android:paddingRight="@dimen/news_list_content_padding"
-                android:paddingTop="@dimen/news_list_content_padding"
-                android:text="@string/earth_content_2" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/news_list_content_padding"
-                android:paddingLeft="@dimen/news_list_content_padding"
-                android:paddingRight="@dimen/news_list_content_padding"
-                android:text="ThS. Phan Thanh Hiền (Tổng hợp)"
-                android:textAlignment="textEnd"
-                android:textStyle="bold" />
 
             <include layout="@layout/comment_item"></include>
         </LinearLayout>

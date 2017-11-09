@@ -18,17 +18,20 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/txt_comment_author"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|fill_horizontal"
-                android:layout_marginLeft="@dimen/news_list_content_padding"
+                android:layout_marginLeft="20dp"
                 android:layout_marginRight="@dimen/news_list_content_padding"
                 android:layout_weight="1"
                 android:hint="bạn là ai..."
                 android:paddingLeft="@dimen/news_list_content_padding"
-                android:paddingRight="@dimen/news_list_content_padding" />
+                android:paddingRight="@dimen/news_list_content_padding"
+                android:background="@drawable/border_comment_your"/>
 
             <ImageView
+                android:id="@+id/btn_comment"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_gravity="center"
@@ -37,13 +40,18 @@
         </LinearLayout>
 
         <EditText
+            android:id="@+id/txt_comment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/news_list_content_padding"
             android:layout_marginRight="@dimen/news_list_content_padding"
             android:hint="ý kiến của bạn..."
             android:paddingLeft="@dimen/news_list_content_padding"
-            android:paddingRight="@dimen/news_list_content_padding" />
+            android:paddingRight="@dimen/news_list_content_padding"
+            android:paddingTop="@dimen/news_list_content_padding"
+            android:paddingBottom="@dimen/news_list_content_padding"
+            android:layout_marginBottom="@dimen/news_list_content_padding"
+            android:background="@drawable/border_comment_your"/>
     </LinearLayout>
 
     <LinearLayout
