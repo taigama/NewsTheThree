@@ -4,13 +4,18 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class SearchActivity extends AppCompatActivity {
 
 
     Toolbar mToolbar;
     View mBtnSearch;
+    TextView mTxtSearch;
 
     ViewPager mViewPager;
 
@@ -35,11 +40,11 @@ public class SearchActivity extends AppCompatActivity {
             }
         });
 
-        mBtnSearch = (View)findViewById(R.id.btn_search);
+        mBtnSearch = (View)findViewById(R.id.btn_cancel);
         mBtnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                fakeData();
+                mTxtSearch.setText("");
             }
         });
 
@@ -53,6 +58,18 @@ public class SearchActivity extends AppCompatActivity {
 
         mViewPager.setAdapter(mAdapterViewPager);
 
+        mTxtSearch = (EditText)findViewById(R.id.txt_search);
+        mTxtSearch.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                    fakeData();
+                    return true;
+                }
+                return false;
+            }
+        });
+
 
     }
 
@@ -62,7 +79,7 @@ public class SearchActivity extends AppCompatActivity {
 
         mFragmentHome.addData(""
                 , ""
-                , "", R.drawable.ic_action_menu, ItemNewsList.TYPE.TAIL);
+                , "", 0, ItemNewsList.TYPE.TAIL);
         mFragmentHome.NotifyDataSetChanged();
     }
 

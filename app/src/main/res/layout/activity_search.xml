@@ -19,22 +19,30 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/news_list_content_padding"
+                android:layout_marginBottom="@dimen/news_list_content_padding"
                 android:layout_marginLeft="@dimen/news_list_content_padding"
-                android:layout_marginRight="@dimen/news_list_content_padding">
+                android:layout_marginRight="@dimen/news_list_content_padding"
+                android:paddingLeft="@dimen/news_list_content_padding"
+                android:paddingRight="@dimen/news_list_content_padding"
+                android:background="@drawable/border_search">
                 <EditText
                     android:id="@+id/txt_search"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
                     android:layout_width="0dp"
+                    android:textColorHint="#888"
+                    android:textColor="#000"
                     android:layout_height="wrap_content"
-                    android:textColor="#fff"
                     android:layout_weight="1"
-                    android:hint="Nhập từ khoá"
-                    android:textColorHint="#ddd"/>
+                    android:hint="               nhập từ khoá"
+                    android:background="#0000"/>
 
                 <ImageView
-                    android:id="@+id/btn_search"
+                    android:id="@+id/btn_cancel"
                     android:layout_width="36dp"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_search_white"/>
+                    app:srcCompat="@drawable/ic_close"/>
 
             </LinearLayout>
         </android.support.v7.widget.Toolbar>

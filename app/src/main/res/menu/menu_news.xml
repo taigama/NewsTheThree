@@ -5,9 +5,14 @@
     tools:context="nhom3.i12.se215.uit.newsthethree.MainActivity"
     >
 
+
     <item
         android:icon="@drawable/ic_comment_white"
         android:title="Go to comments"
+        app:showAsAction="always" />
+    <item
+        android:icon="@drawable/ic_like_empty"
+        android:title="Bookmark this"
         app:showAsAction="always" />
     <item
         android:icon="@drawable/ic_star_white"

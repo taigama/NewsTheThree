@@ -43,9 +43,10 @@
             android:paddingLeft="@dimen/news_list_content_padding"
             android:paddingRight="@dimen/news_list_content_padding">
             <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/banner"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/banner"
+                android:adjustViewBounds="true"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

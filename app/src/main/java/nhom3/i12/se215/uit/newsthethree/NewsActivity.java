@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 
 public class NewsActivity extends AppCompatActivity {
@@ -27,6 +28,16 @@ public class NewsActivity extends AppCompatActivity {
     AlertDialog mDialogCommented;
 
     boolean isBookmarked = false;
+
+
+    ImageView btnLike1;
+    ImageView btnLike2;
+    ImageView btnDislike1;
+    ImageView btnDislike2;
+    boolean mIsLike1 = false;
+    boolean mIsLike2 = true;
+    boolean mIsDislike1 = false;
+    boolean mIsDislike2 = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +101,119 @@ public class NewsActivity extends AppCompatActivity {
                 }
             }
         });
+
+
+        View.OnClickListener reactsListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                ImageView imgTarget = (ImageView)view;
+                int super_id = imgTarget.getId();
+
+
+                switch (super_id)
+                {
+                    case R.id.img_comment_like:
+                    {
+                        if(mIsLike1)
+                        {
+                            mIsLike1 = false;
+                            imgTarget.setImageResource(R.drawable.ic_like_empty);
+                        }
+                        else
+                        {
+                            mIsLike1 = true;
+                            imgTarget.setImageResource(R.drawable.ic_like);
+                        }
+                    }
+                    break;
+                    case R.id.img_comment_like2:
+                    {
+                        if(mIsLike2)
+                        {
+                            mIsLike2 = false;
+                            imgTarget.setImageResource(R.drawable.ic_like_empty);
+                        }
+                        else
+                        {
+                            mIsLike2 = true;
+                            imgTarget.setImageResource(R.drawable.ic_like);
+                        }
+                    }
+                    break;
+                    case R.id.img_comment_dislike:
+                    {
+                        if(mIsDislike1)
+                        {
+                            mIsDislike1 = false;
+                            imgTarget.setImageResource(R.drawable.ic_dislike_empty);
+                        }
+                        else
+                        {
+                            mIsDislike1 = true;
+                            imgTarget.setImageResource(R.drawable.ic_dislike);
+                        }
+                    }
+                    break;
+                    case R.id.img_comment_dislike2:
+                    {
+                        if(mIsDislike2)
+                        {
+                            mIsDislike2 = false;
+                            imgTarget.setImageResource(R.drawable.ic_dislike_empty);
+                        }
+                        else
+                        {
+                            mIsDislike2 = true;
+                            imgTarget.setImageResource(R.drawable.ic_dislike);
+                        }
+                    }
+                    break;
+                }
+            }
+        };
+
+        btnLike1 = (ImageView)findViewById(R.id.img_comment_like);
+        btnLike1.setOnClickListener(reactsListener);
+//        btnLike1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if(mIsLike1)
+//                {
+//                    mIsLike1 = false;
+//                    btnLike1.setImageResource(R.drawable.ic_like_empty);
+//                }
+//                else
+//                {
+//                    btnLike1.setImageResource(R.drawable.ic_like);
+//                    mIsLike1 = true;
+//                }
+//            }
+//        });
+
+        btnLike2 = (ImageView)findViewById(R.id.img_comment_like2);
+        btnLike2.setOnClickListener(reactsListener);
+//        btnLike2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if(mIsLike2)
+//                {
+//                    mIsLike2 = false;
+//                    btnLike2.setImageResource(R.drawable.ic_like_empty);
+//                }
+//                else
+//                {
+//                    btnLike2.setImageResource(R.drawable.ic_like);
+//                    mIsLike2 = true;
+//                }
+//            }
+//        });
+
+        btnDislike1 = (ImageView) findViewById(R.id.img_comment_dislike);
+        btnDislike1.setOnClickListener(reactsListener);
+
+        btnDislike2 = (ImageView)findViewById(R.id.img_comment_dislike2);
+        btnDislike2.setOnClickListener(reactsListener);
     }
 
     @Override

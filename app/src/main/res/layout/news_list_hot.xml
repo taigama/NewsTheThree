@@ -11,7 +11,7 @@
         android:id="@+id/news_image"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        app:srcCompat="@drawable/ava" />
+        app:srcCompat="@drawable/news_bohokhau" />
     <TextView
         android:id="@+id/news_title"
         android:layout_width="match_parent"

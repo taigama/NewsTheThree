@@ -95,33 +95,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/item_menu_bookmark"
-                android:layout_above="@id/item_menu_about"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/news_list_content_padding"
-                android:paddingRight="@dimen/news_list_content_padding">
-                <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_star"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="Tin đã lưu..."
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/news_list_title_size"
-                    android:paddingLeft="@dimen/news_list_content_padding"
-                    android:paddingRight="@dimen/news_list_content_padding"
-                    android:paddingTop="@dimen/news_list_content_padding"
-                    android:paddingBottom="@dimen/news_list_content_padding"
-                    android:layout_marginBottom="@dimen/news_list_content_padding"
-                    android:layout_marginTop="@dimen/news_list_content_padding"
-                    android:layout_marginRight="@dimen/news_list_content_padding"/>
-            </LinearLayout>
-
-            <LinearLayout
                 android:id="@+id/item_menu_about"
                 android:layout_alignParentBottom="true"
                 android:layout_width="match_parent"
@@ -137,7 +110,6 @@
                     android:layout_weight="1"
                     android:text="Về chúng tôi..."
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
                     android:textSize="@dimen/news_list_title_size"
                     android:paddingLeft="@dimen/news_list_content_padding"
                     android:paddingRight="@dimen/news_list_content_padding"
@@ -147,6 +119,62 @@
                     android:layout_marginTop="@dimen/news_list_content_padding"
                     android:layout_marginRight="@dimen/news_list_content_padding"/>
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/item_menu_bookmark"
+                android:layout_above="@id/item_menu_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/news_list_content_padding"
+                android:paddingRight="@dimen/news_list_content_padding">
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_star"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Tin đã lưu..."
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/news_list_title_size"
+                    android:paddingLeft="@dimen/news_list_content_padding"
+                    android:paddingRight="@dimen/news_list_content_padding"
+                    android:paddingTop="@dimen/news_list_content_padding"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:layout_marginBottom="@dimen/news_list_content_padding"
+                    android:layout_marginTop="@dimen/news_list_content_padding"
+                    android:layout_marginRight="@dimen/news_list_content_padding"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/item_menu_notification"
+                android:layout_above="@+id/item_menu_bookmark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/news_list_content_padding"
+                android:paddingRight="@dimen/news_list_content_padding">
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_notifications_empty"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Nhận thông báo"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/news_list_title_size"
+                    android:paddingLeft="@dimen/news_list_content_padding"
+                    android:paddingRight="@dimen/news_list_content_padding"
+                    android:paddingTop="@dimen/news_list_content_padding"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:layout_marginBottom="@dimen/news_list_content_padding"
+                    android:layout_marginTop="@dimen/news_list_content_padding"
+                    android:layout_marginRight="@dimen/news_list_content_padding"/>
+            </LinearLayout>
+
+
+
+
 
         </RelativeLayout>
 
