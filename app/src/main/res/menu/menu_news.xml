@@ -11,11 +11,11 @@
         android:title="Go to comments"
         app:showAsAction="always" />
     <item
-        android:icon="@drawable/ic_like_empty"
+        android:icon="@drawable/ic_like_empty_white"
         android:title="Bookmark this"
         app:showAsAction="always" />
     <item
-        android:icon="@drawable/ic_star_white"
+        android:icon="@drawable/ic_bookmark_empty"
         android:title="Bookmark this"
         app:showAsAction="always" />
 </menu>

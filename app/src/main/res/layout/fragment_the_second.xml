@@ -2,15 +2,596 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="nhom3.i12.se215.uit.newsthethree.TheSecondFragment">
 
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Fragment the second"
-        android:gravity="center"
-        android:textSize="30dp"
-        android:textStyle="bold"/>
+        android:background="#DDD">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xã hội >"
+                android:textColor="#000"
+                android:textSize="28dp"
+                android:paddingLeft="@dimen/news_list_content_padding"
+                android:paddingBottom="@dimen/news_list_half_padding"
+                android:paddingTop="@dimen/news_list_content_padding"/>
+
+            <HorizontalScrollView
+                android:id="@+id/line_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="@string/gold_horizon_x"
+                app:layout_constraintTop_toBottomOf="@id/txt1"
+                android:paddingLeft="@dimen/news_list_half_padding"
+                android:paddingRight="@dimen/news_list_half_padding">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:id="@+id/relati1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            app:layout_constraintDimensionRatio="@string/square"
+                            android:background="#FFF">
+                            <ImageView
+                                android:id="@+id/img1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/news_bhxh"
+                                android:paddingTop="0dp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="BHXH VN đề nghị lộ trình điều chỉnh lương..."
+                                android:layout_below="@id/img1"
+                                android:textStyle="bold"
+                                android:paddingLeft="@dimen/news_list_half_padding"
+                                android:paddingRight="@dimen/news_list_half_padding"
+                                android:textColor="#000"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="3 ngày trước"
+                                android:layout_alignParentBottom="true"
+                                android:textAlignment="textEnd"
+                                android:paddingRight="@dimen/news_list_half_padding"
+                                android:paddingBottom="@dimen/news_list_half_padding"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relati2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            app:layout_constraintDimensionRatio="@string/square"
+                            android:background="#FFF"
+                            app:layout_constraintLeft_toRightOf="@id/relati1"
+                            android:layout_marginLeft="@dimen/news_list_half_padding">
+                            <ImageView
+                                android:id="@+id/img2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/news_canbo_thuy"
+                                android:paddingTop="0dp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Phát hiện trại heo bơm nước trước khi mổ"
+                                android:layout_below="@id/img2"
+                                android:textStyle="bold"
+                                android:paddingLeft="@dimen/news_list_half_padding"
+                                android:paddingRight="@dimen/news_list_half_padding"
+                                android:textColor="#000"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="2 ngày trước"
+                                android:layout_alignParentBottom="true"
+                                android:textAlignment="textEnd"
+                                android:paddingRight="@dimen/news_list_half_padding"
+                                android:paddingBottom="@dimen/news_list_half_padding"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relati3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            app:layout_constraintDimensionRatio="@string/square"
+                            android:background="#FFF"
+                            app:layout_constraintLeft_toRightOf="@id/relati2"
+                            android:layout_marginLeft="@dimen/news_list_half_padding">
+                            <ImageView
+                                android:id="@+id/img3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/news_manhdat_tinhnguoi"
+                                android:paddingTop="0dp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Mảnh đất phá tình người..."
+                                android:layout_below="@id/img3"
+                                android:textStyle="bold"
+                                android:paddingLeft="@dimen/news_list_half_padding"
+                                android:paddingRight="@dimen/news_list_half_padding"
+                                android:textColor="#000"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="23 giờ trước"
+                                android:layout_alignParentBottom="true"
+                                android:textAlignment="textEnd"
+                                android:paddingRight="@dimen/news_list_half_padding"
+                                android:paddingBottom="@dimen/news_list_half_padding"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relati4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            app:layout_constraintDimensionRatio="@string/square"
+                            android:background="#FFF"
+                            app:layout_constraintLeft_toRightOf="@id/relati3"
+                            android:layout_marginLeft="@dimen/news_list_half_padding">
+                            <ImageView
+                                android:id="@+id/img4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/news_dendo_rephai"
+                                android:paddingTop="0dp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Đèn đỏ rẽ phải không được, đâm người trọng..."
+                                android:layout_below="@id/img4"
+                                android:textStyle="bold"
+                                android:paddingLeft="@dimen/news_list_half_padding"
+                                android:paddingRight="@dimen/news_list_half_padding"
+                                android:textColor="#000"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="3 ngày trước"
+                                android:layout_alignParentBottom="true"
+                                android:textAlignment="textEnd"
+                                android:paddingRight="@dimen/news_list_half_padding"
+                                android:paddingBottom="@dimen/news_list_half_padding"/>
+                        </RelativeLayout>
+
+                    </android.support.constraint.ConstraintLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/txt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nhịp sống trẻ >"
+                android:textColor="#000"
+                android:textSize="28dp"
+                android:paddingLeft="@dimen/news_list_content_padding"
+                android:paddingBottom="@dimen/news_list_half_padding"
+                android:paddingTop="@dimen/news_list_content_padding"
+                app:layout_constraintTop_toBottomOf="@id/line_1"/>
+
+            <HorizontalScrollView
+                android:id="@+id/line_2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="@string/gold_horizon_x"
+                app:layout_constraintTop_toBottomOf="@id/txt2"
+                android:paddingLeft="@dimen/news_list_half_padding"
+                android:paddingRight="@dimen/news_list_half_padding">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:id="@+id/relati5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintDimensionRatio="@string/square"
+                        android:background="#FFF">
+                        <ImageView
+                            android:id="@+id/img5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/news_phuot"
+                            android:paddingTop="0dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Chuyến phượt xe máy của Khoa lên báo Hà Lan"
+                            android:layout_below="@id/img5"
+                            android:textStyle="bold"
+                            android:paddingLeft="@dimen/news_list_half_padding"
+                            android:paddingRight="@dimen/news_list_half_padding"
+                            android:textColor="#000"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="1 tuần trước"
+                            android:layout_alignParentBottom="true"
+                            android:textAlignment="textEnd"
+                            android:paddingRight="@dimen/news_list_half_padding"
+                            android:paddingBottom="@dimen/news_list_half_padding"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relati6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintDimensionRatio="@string/square"
+                        android:background="#FFF"
+                        app:layout_constraintLeft_toRightOf="@id/relati5"
+                        android:layout_marginLeft="@dimen/news_list_half_padding">
+                        <ImageView
+                            android:id="@+id/img6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/news_so_nghihoc"
+                            android:paddingTop="0dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Con sợ một ngày phải nghỉ học"
+                            android:layout_below="@id/img6"
+                            android:textStyle="bold"
+                            android:paddingLeft="@dimen/news_list_half_padding"
+                            android:paddingRight="@dimen/news_list_half_padding"
+                            android:textColor="#000"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="15 phút trước"
+                            android:layout_alignParentBottom="true"
+                            android:textAlignment="textEnd"
+                            android:paddingRight="@dimen/news_list_half_padding"
+                            android:paddingBottom="@dimen/news_list_half_padding"/>
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/relati7"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintDimensionRatio="@string/square"
+                        android:background="#FFF"
+                        app:layout_constraintLeft_toRightOf="@id/relati6"
+                        android:layout_marginLeft="@dimen/news_list_half_padding">
+                        <ImageView
+                            android:id="@+id/img7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/news_chunhat_choem"
+                            android:paddingTop="0dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="'Ngày chủ nhật cho em' mang nụ cười..."
+                            android:layout_below="@id/img7"
+                            android:textStyle="bold"
+                            android:paddingLeft="@dimen/news_list_half_padding"
+                            android:paddingRight="@dimen/news_list_half_padding"
+                            android:textColor="#000"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2 tháng trước"
+                            android:layout_alignParentBottom="true"
+                            android:textAlignment="textEnd"
+                            android:paddingRight="@dimen/news_list_half_padding"
+                            android:paddingBottom="@dimen/news_list_half_padding"/>
+                    </RelativeLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:id="@+id/txt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pháp luật >"
+                android:textColor="#000"
+                android:textSize="28dp"
+                android:paddingLeft="@dimen/news_list_content_padding"
+                android:paddingBottom="@dimen/news_list_half_padding"
+                android:paddingTop="@dimen/news_list_content_padding"
+                app:layout_constraintTop_toBottomOf="@id/line_2"/>
+
+            <HorizontalScrollView
+                android:id="@+id/line_3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="@string/gold_horizon_x"
+                app:layout_constraintTop_toBottomOf="@id/txt3"
+                android:paddingLeft="@dimen/news_list_half_padding"
+                android:paddingRight="@dimen/news_list_half_padding">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:id="@+id/relati8"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintDimensionRatio="@string/square"
+                        android:background="#FFF">
+                        <ImageView
+                            android:id="@+id/img8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/news_luatdan_canbo"
+                            android:paddingTop="0dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Luật dân có khác luật cho cán bộ?"
+                            android:layout_below="@id/img8"
+                            android:textStyle="bold"
+                            android:paddingLeft="@dimen/news_list_half_padding"
+                            android:paddingRight="@dimen/news_list_half_padding"
+                            android:textColor="#000"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="1 tuần trước"
+                            android:layout_alignParentBottom="true"
+                            android:textAlignment="textEnd"
+                            android:paddingRight="@dimen/news_list_half_padding"
+                            android:paddingBottom="@dimen/news_list_half_padding"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relati9"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintDimensionRatio="@string/square"
+                        android:background="#FFF"
+                        app:layout_constraintLeft_toRightOf="@id/relati8"
+                        android:layout_marginLeft="@dimen/news_list_half_padding">
+                        <ImageView
+                            android:id="@+id/img9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/dhqg"
+                            android:paddingTop="0dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="6 thành viên ĐHQG TP.HCM thu học phí 'lố' 81 tỉ "
+                            android:layout_below="@id/img9"
+                            android:textStyle="bold"
+                            android:paddingLeft="@dimen/news_list_half_padding"
+                            android:paddingRight="@dimen/news_list_half_padding"
+                            android:textColor="#000"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="15 phút trước"
+                            android:layout_alignParentBottom="true"
+                            android:textAlignment="textEnd"
+                            android:paddingRight="@dimen/news_list_half_padding"
+                            android:paddingBottom="@dimen/news_list_half_padding"/>
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/relati10"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintDimensionRatio="@string/square"
+                        android:background="#FFF"
+                        app:layout_constraintLeft_toRightOf="@id/relati9"
+                        android:layout_marginLeft="@dimen/news_list_half_padding">
+                        <ImageView
+                            android:id="@+id/img10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/news_hoan_phien_toa"
+                            android:paddingTop="0dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Hoãn phiên toà vì xuất hiện văn bản lạ"
+                            android:layout_below="@id/img10"
+                            android:textStyle="bold"
+                            android:paddingLeft="@dimen/news_list_half_padding"
+                            android:paddingRight="@dimen/news_list_half_padding"
+                            android:textColor="#000"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2 tháng trước"
+                            android:layout_alignParentBottom="true"
+                            android:textAlignment="textEnd"
+                            android:paddingRight="@dimen/news_list_half_padding"
+                            android:paddingBottom="@dimen/news_list_half_padding"/>
+                    </RelativeLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/txt4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Công nghệ >"
+                android:textColor="#000"
+                android:textSize="28dp"
+                android:paddingLeft="@dimen/news_list_content_padding"
+                android:paddingBottom="@dimen/news_list_half_padding"
+                android:paddingTop="@dimen/news_list_content_padding"
+                app:layout_constraintTop_toBottomOf="@id/line_3"/>
+
+            <HorizontalScrollView
+                android:id="@+id/line_4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="@string/gold_horizon_x"
+                app:layout_constraintTop_toBottomOf="@id/txt4"
+                android:paddingLeft="@dimen/news_list_half_padding"
+                android:paddingRight="@dimen/news_list_half_padding">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:id="@+id/relati11"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintDimensionRatio="@string/square"
+                        android:background="#FFF">
+                        <ImageView
+                            android:id="@+id/img11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/news_apple"
+                            android:paddingTop="0dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Apple lại phải hướng dẫn cách dùng iphone"
+                            android:layout_below="@id/img11"
+                            android:textStyle="bold"
+                            android:paddingLeft="@dimen/news_list_half_padding"
+                            android:paddingRight="@dimen/news_list_half_padding"
+                            android:textColor="#000"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="1 tuần trước"
+                            android:layout_alignParentBottom="true"
+                            android:textAlignment="textEnd"
+                            android:paddingRight="@dimen/news_list_half_padding"
+                            android:paddingBottom="@dimen/news_list_half_padding"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relati12"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintDimensionRatio="@string/square"
+                        android:background="#FFF"
+                        app:layout_constraintLeft_toRightOf="@id/relati11"
+                        android:layout_marginLeft="@dimen/news_list_half_padding">
+                        <ImageView
+                            android:id="@+id/img12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/tu_dien"
+                            android:paddingTop="0dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tất tần tật về tụ điện"
+                            android:layout_below="@id/img12"
+                            android:textStyle="bold"
+                            android:paddingLeft="@dimen/news_list_half_padding"
+                            android:paddingRight="@dimen/news_list_half_padding"
+                            android:textColor="#000"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="15 phút trước"
+                            android:layout_alignParentBottom="true"
+                            android:textAlignment="textEnd"
+                            android:paddingRight="@dimen/news_list_half_padding"
+                            android:paddingBottom="@dimen/news_list_half_padding"/>
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/relati13"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintDimensionRatio="@string/square"
+                        android:background="#FFF"
+                        app:layout_constraintLeft_toRightOf="@id/relati12"
+                        android:layout_marginLeft="@dimen/news_list_half_padding">
+                        <ImageView
+                            android:id="@+id/img13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/ten_lua"
+                            android:paddingTop="0dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="SpaceX tái sử dụng cả tên lửa, tàu vũ trụ"
+                            android:layout_below="@id/img13"
+                            android:textStyle="bold"
+                            android:paddingLeft="@dimen/news_list_half_padding"
+                            android:paddingRight="@dimen/news_list_half_padding"
+                            android:textColor="#000"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2 tháng trước"
+                            android:layout_alignParentBottom="true"
+                            android:textAlignment="textEnd"
+                            android:paddingRight="@dimen/news_list_half_padding"
+                            android:paddingBottom="@dimen/news_list_half_padding"/>
+                    </RelativeLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </HorizontalScrollView>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 
 </FrameLayout>

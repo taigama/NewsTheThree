@@ -1,4 +1,9 @@
 <resources>
+    <string name="square">1:1</string>
+    <string name="gold_vertical">1:1.618</string>
+    <string name="gold_horizon">1.618:1</string>
+    <string name="gold_horizon_x">2.618:1</string>
+
     <string name="app_name">News the Three</string>
     <string name="action_settings">Settings</string>
 

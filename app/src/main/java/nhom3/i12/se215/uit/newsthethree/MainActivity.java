@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         viewPagerAdapter.addFragment(mFragmentSub[0], "Thời sự");
         viewPagerAdapter.addFragment(mFragmentSub[1], "Pháp luật");
         viewPagerAdapter.addFragment(mFragmentSub[2], "Nhịp sống trẻ");
-        //viewPagerAdapter.addFragment(new TheSecondFragment(), "t Second");
+        viewPagerAdapter.addFragment(new TheSecondFragment(), "Tin tức của tôi");
         //viewPagerAdapter.addFragment(new TheThirdFragment(), "t third");
 
         viewPager.setAdapter(viewPagerAdapter);
