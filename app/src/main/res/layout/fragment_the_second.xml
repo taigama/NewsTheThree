@@ -9,7 +9,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#DDD">
+        android:background="#EEE">
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -19,7 +19,7 @@
                 android:layout_height="wrap_content"
                 android:text="Xã hội >"
                 android:textColor="#000"
-                android:textSize="28dp"
+                android:textSize="28sp"
                 android:paddingLeft="@dimen/news_list_content_padding"
                 android:paddingBottom="@dimen/news_list_half_padding"
                 android:paddingTop="@dimen/news_list_content_padding"/>
@@ -188,7 +188,7 @@
                 android:layout_height="wrap_content"
                 android:text="Nhịp sống trẻ >"
                 android:textColor="#000"
-                android:textSize="28dp"
+                android:textSize="28sp"
                 android:paddingLeft="@dimen/news_list_content_padding"
                 android:paddingBottom="@dimen/news_list_half_padding"
                 android:paddingTop="@dimen/news_list_content_padding"
@@ -325,7 +325,7 @@
                 android:layout_height="wrap_content"
                 android:text="Pháp luật >"
                 android:textColor="#000"
-                android:textSize="28dp"
+                android:textSize="28sp"
                 android:paddingLeft="@dimen/news_list_content_padding"
                 android:paddingBottom="@dimen/news_list_half_padding"
                 android:paddingTop="@dimen/news_list_content_padding"
@@ -461,7 +461,7 @@
                 android:layout_height="wrap_content"
                 android:text="Công nghệ >"
                 android:textColor="#000"
-                android:textSize="28dp"
+                android:textSize="28sp"
                 android:paddingLeft="@dimen/news_list_content_padding"
                 android:paddingBottom="@dimen/news_list_half_padding"
                 android:paddingTop="@dimen/news_list_content_padding"
