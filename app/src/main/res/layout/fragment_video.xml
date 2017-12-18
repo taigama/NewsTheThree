@@ -1,0 +1,662 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nhom3.i12.se215.uit.newsthethree.VideoFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/news_list_content_padding">
+
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/frame_big"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/news_list_content_padding"
+            android:paddingEnd="@dimen/news_list_content_padding"
+            android:paddingTop="@dimen/news_list_content_padding">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/item_left"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintLeft_toLeftOf="parent">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#000"/>
+                <ImageView
+                    android:id="@+id/imge1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:srcCompat="@drawable/news_bhxh"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/title1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/news_list_content_padding"
+                    android:paddingRight="@dimen/news_list_content_padding"
+                    android:text="Bảo hiểm xã hội vỡ nợ"
+                    android:textColor="#EEE"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/imge1"
+                    android:paddingTop="@dimen/news_list_half_padding"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:paddingStart="@dimen/news_list_content_padding"
+                    android:paddingEnd="@dimen/news_list_content_padding"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:text="Tin tức xã hội"
+                    android:textColor="#0AD"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/news_image"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textColor="#CCC"
+                    android:paddingStart="@dimen/news_list_content_padding"
+                    android:paddingEnd="@dimen/news_list_content_padding"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:text="1 giờ"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#B000"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/imge1">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_play"
+                        android:paddingStart="@dimen/news_list_content_padding"
+                        android:paddingEnd="@dimen/news_list_half_padding"
+                        android:paddingTop="@dimen/news_list_half_padding"
+                        android:paddingBottom="@dimen/news_list_half_padding"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFF"
+                        android:textSize="20sp"
+                        android:text="      1:30"
+                        android:paddingRight="@dimen/news_list_content_padding"/>
+                </FrameLayout>
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintLeft_toRightOf="@id/item_left"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginStart="@dimen/news_list_content_padding">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#000"/>
+                <ImageView
+                    android:id="@+id/imge2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:srcCompat="@drawable/news_bhxh"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/title2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/news_list_content_padding"
+                    android:paddingRight="@dimen/news_list_content_padding"
+                    android:text="Bảo hiểm xã hội vỡ nợ"
+                    android:textColor="#EEE"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/imge2"
+                    android:paddingTop="@dimen/news_list_half_padding"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:paddingStart="@dimen/news_list_content_padding"
+                    android:paddingEnd="@dimen/news_list_content_padding"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:text="Tin tức xã hội"
+                    android:textColor="#0AD"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/news_image"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textColor="#CCC"
+                    android:paddingStart="@dimen/news_list_content_padding"
+                    android:paddingEnd="@dimen/news_list_content_padding"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:text="1 giờ"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#B000"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/imge2">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_play"
+                        android:paddingStart="@dimen/news_list_content_padding"
+                        android:paddingEnd="@dimen/news_list_half_padding"
+                        android:paddingTop="@dimen/news_list_half_padding"
+                        android:paddingBottom="@dimen/news_list_half_padding"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFF"
+                        android:textSize="20sp"
+                        android:text="      1:30"
+                        android:paddingRight="@dimen/news_list_content_padding"/>
+                </FrameLayout>
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/frame_big2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingStart="@dimen/news_list_content_padding"
+            android:paddingEnd="@dimen/news_list_content_padding"
+            android:paddingTop="@dimen/news_list_content_padding">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/item_left2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintLeft_toLeftOf="parent">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#000"/>
+                <ImageView
+                    android:id="@+id/imge3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:srcCompat="@drawable/news_bhxh"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/news_list_content_padding"
+                    android:paddingRight="@dimen/news_list_content_padding"
+                    android:text="Bảo hiểm xã hội vỡ nợ"
+                    android:textColor="#EEE"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/imge3"
+                    android:paddingTop="@dimen/news_list_half_padding"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:paddingStart="@dimen/news_list_content_padding"
+                    android:paddingEnd="@dimen/news_list_content_padding"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:text="Tin tức xã hội"
+                    android:textColor="#0AD"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/news_image"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textColor="#CCC"
+                    android:paddingStart="@dimen/news_list_content_padding"
+                    android:paddingEnd="@dimen/news_list_content_padding"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:text="1 giờ"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#B000"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/imge3">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_play"
+                        android:paddingStart="@dimen/news_list_content_padding"
+                        android:paddingEnd="@dimen/news_list_half_padding"
+                        android:paddingTop="@dimen/news_list_half_padding"
+                        android:paddingBottom="@dimen/news_list_half_padding"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFF"
+                        android:textSize="20sp"
+                        android:text="      1:30"
+                        android:paddingRight="@dimen/news_list_content_padding"/>
+                </FrameLayout>
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintLeft_toRightOf="@id/item_left2"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginStart="@dimen/news_list_content_padding">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#000"/>
+                <ImageView
+                    android:id="@+id/imge4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:srcCompat="@drawable/news_bhxh"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/news_list_content_padding"
+                    android:paddingRight="@dimen/news_list_content_padding"
+                    android:text="Bảo hiểm xã hội vỡ nợ"
+                    android:textColor="#EEE"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/imge4"
+                    android:paddingTop="@dimen/news_list_half_padding"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:paddingStart="@dimen/news_list_content_padding"
+                    android:paddingEnd="@dimen/news_list_content_padding"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:text="Tin tức xã hội"
+                    android:textColor="#0AD"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/news_image"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textColor="#CCC"
+                    android:paddingStart="@dimen/news_list_content_padding"
+                    android:paddingEnd="@dimen/news_list_content_padding"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:text="1 giờ"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#B000"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/imge4">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_play"
+                        android:paddingStart="@dimen/news_list_content_padding"
+                        android:paddingEnd="@dimen/news_list_half_padding"
+                        android:paddingTop="@dimen/news_list_half_padding"
+                        android:paddingBottom="@dimen/news_list_half_padding"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFF"
+                        android:textSize="20sp"
+                        android:text="      1:30"
+                        android:paddingRight="@dimen/news_list_content_padding"/>
+                </FrameLayout>
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/frame_big3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingStart="@dimen/news_list_content_padding"
+            android:paddingEnd="@dimen/news_list_content_padding"
+            android:paddingTop="@dimen/news_list_content_padding">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/item_left3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintLeft_toLeftOf="parent">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#000"/>
+                <ImageView
+                    android:id="@+id/imge5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:srcCompat="@drawable/news_bhxh"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/news_list_content_padding"
+                    android:paddingRight="@dimen/news_list_content_padding"
+                    android:text="Bảo hiểm xã hội vỡ nợ"
+                    android:textColor="#EEE"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/imge5"
+                    android:paddingTop="@dimen/news_list_half_padding"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:paddingStart="@dimen/news_list_content_padding"
+                    android:paddingEnd="@dimen/news_list_content_padding"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:text="Tin tức xã hội"
+                    android:textColor="#0AD"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/news_image"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textColor="#CCC"
+                    android:paddingStart="@dimen/news_list_content_padding"
+                    android:paddingEnd="@dimen/news_list_content_padding"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:text="1 giờ"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#B000"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/imge5">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_play"
+                        android:paddingStart="@dimen/news_list_content_padding"
+                        android:paddingEnd="@dimen/news_list_half_padding"
+                        android:paddingTop="@dimen/news_list_half_padding"
+                        android:paddingBottom="@dimen/news_list_half_padding"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFF"
+                        android:textSize="20sp"
+                        android:text="      1:30"
+                        android:paddingRight="@dimen/news_list_content_padding"/>
+                </FrameLayout>
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintLeft_toRightOf="@id/item_left3"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginStart="@dimen/news_list_content_padding">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#000"/>
+                <ImageView
+                    android:id="@+id/imge6"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:srcCompat="@drawable/news_bhxh"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/news_list_content_padding"
+                    android:paddingRight="@dimen/news_list_content_padding"
+                    android:text="Bảo hiểm xã hội vỡ nợ"
+                    android:textColor="#EEE"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/imge6"
+                    android:paddingTop="@dimen/news_list_half_padding"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:paddingStart="@dimen/news_list_content_padding"
+                    android:paddingEnd="@dimen/news_list_content_padding"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:text="Tin tức xã hội"
+                    android:textColor="#0AD"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/news_image"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textColor="#CCC"
+                    android:paddingStart="@dimen/news_list_content_padding"
+                    android:paddingEnd="@dimen/news_list_content_padding"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:text="1 giờ"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#B000"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/imge6">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_play"
+                        android:paddingStart="@dimen/news_list_content_padding"
+                        android:paddingEnd="@dimen/news_list_half_padding"
+                        android:paddingTop="@dimen/news_list_half_padding"
+                        android:paddingBottom="@dimen/news_list_half_padding"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFF"
+                        android:textSize="20sp"
+                        android:text="      1:30"
+                        android:paddingRight="@dimen/news_list_content_padding"/>
+                </FrameLayout>
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/frame_big4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingStart="@dimen/news_list_content_padding"
+            android:paddingEnd="@dimen/news_list_content_padding"
+            android:paddingTop="@dimen/news_list_content_padding">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/item_left4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintLeft_toLeftOf="parent">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#000"/>
+                <ImageView
+                    android:id="@+id/imge7"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:srcCompat="@drawable/news_bhxh"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/news_list_content_padding"
+                    android:paddingRight="@dimen/news_list_content_padding"
+                    android:text="Bảo hiểm xã hội vỡ nợ"
+                    android:textColor="#EEE"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/imge7"
+                    android:paddingTop="@dimen/news_list_half_padding"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:paddingStart="@dimen/news_list_content_padding"
+                    android:paddingEnd="@dimen/news_list_content_padding"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:text="Tin tức xã hội"
+                    android:textColor="#0AD"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/news_image"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textColor="#CCC"
+                    android:paddingStart="@dimen/news_list_content_padding"
+                    android:paddingEnd="@dimen/news_list_content_padding"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:text="1 giờ"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#B000"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/imge7">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_play"
+                        android:paddingStart="@dimen/news_list_content_padding"
+                        android:paddingEnd="@dimen/news_list_half_padding"
+                        android:paddingTop="@dimen/news_list_half_padding"
+                        android:paddingBottom="@dimen/news_list_half_padding"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFF"
+                        android:textSize="20sp"
+                        android:text="      1:30"
+                        android:paddingRight="@dimen/news_list_content_padding"/>
+                </FrameLayout>
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintLeft_toRightOf="@id/item_left4"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginStart="@dimen/news_list_content_padding">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#000"/>
+                <ImageView
+                    android:id="@+id/imge8"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:srcCompat="@drawable/news_bhxh"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/news_list_content_padding"
+                    android:paddingRight="@dimen/news_list_content_padding"
+                    android:text="Bảo hiểm xã hội vỡ nợ"
+                    android:textColor="#EEE"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/imge8"
+                    android:paddingTop="@dimen/news_list_half_padding"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:paddingStart="@dimen/news_list_content_padding"
+                    android:paddingEnd="@dimen/news_list_content_padding"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:text="Tin tức xã hội"
+                    android:textColor="#0AD"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/news_image"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textColor="#CCC"
+                    android:paddingStart="@dimen/news_list_content_padding"
+                    android:paddingEnd="@dimen/news_list_content_padding"
+                    android:paddingBottom="@dimen/news_list_content_padding"
+                    android:text="1 giờ"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#B000"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/imge8">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_play"
+                        android:paddingStart="@dimen/news_list_content_padding"
+                        android:paddingEnd="@dimen/news_list_half_padding"
+                        android:paddingTop="@dimen/news_list_half_padding"
+                        android:paddingBottom="@dimen/news_list_half_padding"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFF"
+                        android:textSize="20sp"
+                        android:text="      1:30"
+                        android:paddingRight="@dimen/news_list_content_padding"/>
+                </FrameLayout>
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

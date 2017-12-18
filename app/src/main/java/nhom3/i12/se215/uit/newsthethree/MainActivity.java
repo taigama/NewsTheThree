@@ -2,40 +2,20 @@ package nhom3.i12.se215.uit.newsthethree;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 //import android.app.Fragment;
 //import android.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
-import android.text.style.RelativeSizeSpan;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
-
-import java.util.ArrayList;
-import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -97,8 +77,8 @@ public class MainActivity extends AppCompatActivity {
         viewPagerAdapter.addFragment(mFragmentSub[0], "Thời sự");
         viewPagerAdapter.addFragment(mFragmentSub[1], "Pháp luật");
         viewPagerAdapter.addFragment(mFragmentSub[2], "Nhịp sống trẻ");
-        viewPagerAdapter.addFragment(new TheSecondFragment(), "Tin tức của tôi");
-        //viewPagerAdapter.addFragment(new TheThirdFragment(), "t third");
+        viewPagerAdapter.addFragment(new MyNewsFragment(), "Tin tức của tôi");
+        viewPagerAdapter.addFragment(new VideoFragment(), "Video");
 
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);

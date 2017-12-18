@@ -20,14 +20,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NewsActivity"
+        <activity
+            android:name=".NewsActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".AboutActivity"
+        <activity
+            android:name=".AboutActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".SearchActivity"
+        <activity
+            android:name=".SearchActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".BookmarkActivity"
-            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".BookmarkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CategoryActivity"
+            android:label="@string/title_activity_category"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

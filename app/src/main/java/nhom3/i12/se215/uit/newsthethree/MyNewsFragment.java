@@ -1,49 +1,22 @@
 package nhom3.i12.se215.uit.newsthethree;
 
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TheSecondFragment extends Fragment {
+public class MyNewsFragment extends Fragment {
 
 
-    public class CategoryClicker implements View.OnClickListener {
-        private Context mContext;
-        public CategoryClicker(Context context){
-            mContext = context;
-        }
 
-        @Override
-        public void onClick(View view) {
-            Intent intent = new Intent(mContext, NewsActivity.class);
-            mContext.startActivity(intent);
-        }
-    }
 
-    public class NewsClicker implements View.OnClickListener {
-        private Context mContext;
-        public NewsClicker(Context context){
-            mContext = context;
-        }
-
-        @Override
-        public void onClick(View view) {
-            Intent intent = new Intent(mContext, NewsActivity.class);
-            mContext.startActivity(intent);
-        }
-    }
-
-    public TheSecondFragment() {
+    public MyNewsFragment() {
         // Required empty public constructor
     }
 
@@ -52,7 +25,7 @@ public class TheSecondFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_the_second, container, false);
+        View v = inflater.inflate(R.layout.fragment_my_news, container, false);
 
         View txt1 = v.findViewById(R.id.txt1);
         View txt2 = v.findViewById(R.id.txt2);
