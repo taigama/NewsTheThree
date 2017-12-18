@@ -1,6 +1,8 @@
 package nhom3.i12.se215.uit.newsthethree;
 
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -16,6 +18,8 @@ import android.widget.ScrollView;
 public class NewsActivity extends AppCompatActivity {
     private static String TAG = NewsActivity.class.getSimpleName();
 
+
+    Context mContext;
 
     Toolbar mToolbar;
     ScrollView mScrollView;
@@ -44,6 +48,8 @@ public class NewsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
 
+        mContext = this;
+
         mToolbar = (Toolbar)findViewById(R.id.toolbar_news);
         setSupportActionBar(mToolbar);
         setTitle("");
@@ -65,7 +71,7 @@ public class NewsActivity extends AppCompatActivity {
         mTxtAuthor = (EditText) findViewById(R.id.txt_comment_author);
         mTxtComment = (EditText) findViewById(R.id.txt_comment);
 
-        mBtnComment = (View)findViewById(R.id.btn_comment);
+        mBtnComment = findViewById(R.id.btn_comment);
 
         AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
         builder1.setMessage("Cám ơn bạn đã đóng góp ý kiến, thông điệp của bạn sẽ được hiển thị trong chốc lát."
@@ -224,7 +230,11 @@ public class NewsActivity extends AppCompatActivity {
         menu.getItem(0).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
-                mScrollView.smoothScrollTo(0,mContentEntire.getHeight());
+                //mScrollView.smoothScrollTo(0,mContentEntire.getHeight());
+
+                Intent intent = new Intent(mContext, CommentActivity.class);
+                mContext.startActivity(intent);
+
                 return true;
             }
         });

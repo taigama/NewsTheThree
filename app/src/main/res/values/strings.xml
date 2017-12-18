@@ -44,7 +44,9 @@
 \n Không có bất kỳ lực không cân bằng nào khác tác động lên chúng, nên quán tính của Mặt Trời và các hành tinh đã giữ chúng quay trong hàng tỷ năm qua.
 \n Và chúng sẽ tiếp tục quay cho đến khi chúng va chạm với các vật thể khác, hàng tỷ hoặc thậm chí hàng nghìn tỷ năm sau trong tương lai.
 </string>
-    <string name="comment_thank">Bài viết này rất hay, cám ơn tác giả nhé!\n\n p/s: Tôi thấy người làm app này rất là đẹp chai.</string>
+    <string name="comment_thank">Bài viết này rất hay, cám ơn tác giả nhé!\np/s: Lâu rồi mới đọc được bài hay.</string>
+    <string name="comment_thank2">Thật là kỳ lạ</string>
+    <string name="comment_thank3">Xin cảm ơn tác giả đã giúp tôi được mở mang kiến thức.</string>
     <string name="n">\n</string>
     <string name="about_title">Khoa Công nghệ Phần mềm
         \nGiao tiếp người - máy

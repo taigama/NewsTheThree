@@ -39,7 +39,8 @@
         <activity
             android:name=".VideoActivity"
             android:label="@string/title_activity_video"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".CommentActivity"></activity>
     </application>
 
 </manifest>
