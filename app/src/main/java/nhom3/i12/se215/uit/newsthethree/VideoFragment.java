@@ -23,7 +23,25 @@ public class VideoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_video, container, false);
+        View v = inflater.inflate(R.layout.fragment_video, container, false);
+
+        View frameBig1 = v.findViewById(R.id.frame_big);
+        View frameBig2 = v.findViewById(R.id.frame_big2);
+        View frameBig3 = v.findViewById(R.id.frame_big3);
+        View frameBig4 = v.findViewById(R.id.frame_big4);
+        View frameBig5 = v.findViewById(R.id.item_left5);
+
+        VideoClicker videoClicker = new VideoClicker(getContext());
+
+        frameBig1.setOnClickListener(videoClicker);
+        frameBig2.setOnClickListener(videoClicker);
+        frameBig3.setOnClickListener(videoClicker);
+        frameBig4.setOnClickListener(videoClicker);
+        frameBig5.setOnClickListener(videoClicker);
+
+
+
+        return v;
     }
 
 }

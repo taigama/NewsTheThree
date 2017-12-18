@@ -57,23 +57,18 @@
                     android:paddingLeft="@dimen/news_list_content_padding"
                     android:paddingRight="@dimen/news_list_content_padding">
 
-                    <ImageView
-                        android:id="@+id/wrap_below_title"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp" />
-
                     <TextView
                         android:id="@+id/news_time"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignLeft="@id/wrap_below_title"
+                        android:layout_alignParentStart="true"
                         android:text="16/9/2016" />
 
                     <TextView
                         android:id="@+id/news_category"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignEnd="@id/wrap_below_title"
+                        android:layout_alignParentEnd="true"
                         android:text="Em yêu khoa học"
                         android:textColor="@color/colorAccent" />
                 </RelativeLayout>
