@@ -128,7 +128,7 @@
             </LinearLayout>
 
 
-            <include layout="@layout/comment_item"></include>
+            <include layout="@layout/item_related"></include>
         </LinearLayout>
     </ScrollView>
 

@@ -37,6 +37,8 @@ public class VideoActivity extends AppCompatActivity {
 
         mMediaController = new MediaController(this);
 
+        setTitle("");
+
         playVideo();
     }
 
