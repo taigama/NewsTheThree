@@ -155,4 +155,5 @@
     </string>
     <string name="title_activity_video">VideoActivity</string>
     <string name="ngontay_content">Trong thời đại kỹ thuật số, nhiều người dán mắt vào màn hình điện thoại di động, máy tính bảng hàng giờ liền, các ngón tay thì thì lướt liên tục trên màn hình đọc thông tin hay chơi game ở mọi lúc mọi nơi. Và không ít người đã rơi vào tình trạng các ngón tay khó khăn khi co lại hay duỗi ra, nặng hơn thì các ngón tay bị kẹt cứng, đứng yên một vị trí.</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
 </resources>
