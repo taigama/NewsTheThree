@@ -26,7 +26,7 @@ public class CommentActivity extends AppCompatActivity {
 
         Toolbar mToolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
-        setTitle("");
+        setTitle("Tại sao trái đất lại xoay?");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);

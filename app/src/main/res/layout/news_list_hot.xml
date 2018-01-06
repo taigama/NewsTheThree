@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/news_item_box"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -76,7 +75,8 @@
         android:layout_height="wrap_content"
         android:text=" 3"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintStart_toEndOf="@id/img_like"/>
+        app:layout_constraintStart_toEndOf="@id/img_like"
+        app:layout_constraintTop_toBottomOf="@id/news_title"/>
     <TextView
         android:id="@+id/news_category"
         android:layout_width="wrap_content"
@@ -95,8 +95,8 @@
         android:paddingLeft="@dimen/news_list_content_padding"
         android:paddingRight="@dimen/news_list_content_padding"
         android:textColor="#EEE"
-        android:paddingTop="@dimen/news_list_content_padding"
+        android:paddingTop="@dimen/news_list_half_padding"
         app:layout_constraintTop_toBottomOf="@id/news_category"
-        android:paddingBottom="@dimen/news_list_content_padding"
+        android:paddingBottom="@dimen/news_list_half_padding"
         android:text="Bà con mau đến xem! Độ hót nhiều không thể tả. Phải đấy! Cực kỳ hót. Không những hót 1 lần, mà còn hót qua năm tháng. "/>
 </android.support.constraint.ConstraintLayout>
