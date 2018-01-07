@@ -1,209 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:paddingTop="20dp"
-    android:paddingBottom="20dp"
+    android:paddingTop="@dimen/news_list_content_padding"
+    android:paddingBottom="@dimen/news_list_content_padding"
+    android:paddingRight="@dimen/news_list_content_padding"
+    android:paddingLeft="@dimen/news_list_content_padding"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/txt_comment_author"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|fill_horizontal"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="@dimen/news_list_content_padding"
-                android:layout_weight="1"
-                android:hint="bạn là ai..."
-                android:paddingLeft="@dimen/news_list_content_padding"
-                android:paddingRight="@dimen/news_list_content_padding"
-                android:background="@drawable/border_comment_your"/>
-
-            <ImageView
-                android:id="@+id/btn_comment"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_gravity="center"
-                android:layout_marginRight="@dimen/news_list_content_padding"
-                app:srcCompat="@drawable/ic_send" />
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/txt_comment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/news_list_content_padding"
-            android:layout_marginRight="@dimen/news_list_content_padding"
-            android:hint="ý kiến của bạn..."
-            android:paddingLeft="@dimen/news_list_content_padding"
-            android:paddingRight="@dimen/news_list_content_padding"
-            android:paddingTop="@dimen/news_list_content_padding"
-            android:paddingBottom="@dimen/news_list_content_padding"
-            android:layout_marginBottom="@dimen/news_list_content_padding"
-            android:background="@drawable/border_comment_your"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/border_comment">
-
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/news_list_content_padding"
-        android:paddingRight="@dimen/news_list_content_padding">
-
-        <ImageView
-            android:id="@+id/img_comment_ava"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            app:srcCompat="@drawable/ic_account_circle" />
-        <TextView
-            android:id="@+id/tv_comment_author"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/news_list_content_padding"
-            android:paddingRight="@dimen/news_list_content_padding"
-            android:text="Kẻ thần bí"
-            android:textSize="@dimen/news_list_title_size"
-            android:textStyle="bold"
-            android:layout_gravity="center_vertical"/>
-    </LinearLayout>
+    android:layout_height="wrap_content"
+    android:background="#EEE">
 
     <TextView
-        android:id="@+id/tv_comment"
+        android:id="@+id/txt_related"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/news_list_content_padding"
-        android:layout_marginRight="@dimen/news_list_content_padding"
-        android:layout_marginBottom="@dimen/news_list_content_padding"
-        android:paddingLeft="@dimen/news_list_content_padding"
-        android:paddingRight="@dimen/news_list_content_padding"
-        android:paddingTop="@dimen/news_list_content_padding"
-        android:paddingBottom="@dimen/news_list_content_padding"
-        android:text="@string/comment_thank"
-        android:background="@drawable/border_comment_inner"/>
+        android:textSize="28sp"
+        android:text="Tin liên quan >"
+        android:textColor="#000"/>
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="40dp"
-        android:paddingRight="40dp"
-        android:paddingBottom="@dimen/news_list_content_padding"
-        android:weightSum="3">
-
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/frame_big_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="4.236:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_related"
+        android:background="#FFF">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
         <ImageView
-            android:id="@+id/img_comment_like"
+            android:id="@+id/news_image_1"
             android:layout_width="0dp"
-            android:layout_height="18dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_like_empty" />
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ten_lua"
+            app:layout_constraintDimensionRatio="1.618:1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
         <TextView
-            android:id="@+id/btn_comment_reply"
+            android:id="@+id/news_title_1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Trả lời"
-            android:textColor="@color/colorAccent"
-            android:textAlignment="center"/>
-        <ImageView
-            android:id="@+id/img_comment_dislike"
-            android:layout_width="0dp"
-            android:layout_height="18dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_dislike_empty" />
-    </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:background="@drawable/border_comment">
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/news_list_content_padding"
-        android:paddingRight="@dimen/news_list_content_padding">
-
-        <ImageView
-            android:id="@+id/img_comment_ava2"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            app:srcCompat="@drawable/ic_account_circle" />
+            android:paddingLeft="@dimen/news_list_half_padding"
+            android:paddingRight="@dimen/news_list_half_padding"
+            android:text="Du lịch không gian với tên lửa của SpaceX"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/news_image_1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
         <TextView
-            android:id="@+id/tv_comment_author2"
+            android:id="@+id/news_category_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/news_list_half_padding"
+            android:paddingRight="@dimen/news_list_half_padding"
+            android:text="Khoa học"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/news_image_1"
+            app:layout_constraintEnd_toStartOf="@id/news_date_1"/>
+        <TextView
+            android:id="@+id/news_date_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/news_list_content_padding"
-            android:paddingRight="@dimen/news_list_content_padding"
-            android:text="Kẻ thần bí khác"
-            android:textSize="@dimen/news_list_title_size"
-            android:textStyle="bold"
-            android:layout_gravity="center_vertical"/>
-    </LinearLayout>
+            android:paddingLeft="@dimen/news_list_half_padding"
+            android:paddingRight="@dimen/news_list_half_padding"
+            android:text="1 ngày"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/news_category_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+    </android.support.constraint.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/tv_comment2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/news_list_content_padding"
-        android:layout_marginRight="@dimen/news_list_content_padding"
-        android:layout_marginBottom="@dimen/news_list_content_padding"
-        android:paddingLeft="@dimen/news_list_content_padding"
-        android:paddingRight="@dimen/news_list_content_padding"
-        android:paddingTop="@dimen/news_list_content_padding"
-        android:paddingBottom="@dimen/news_list_content_padding"
-        android:text="Cảm ơn bạn. ^.^"
-        android:background="@drawable/border_comment_inner"/>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="40dp"
-        android:paddingRight="40dp"
-        android:paddingBottom="@dimen/news_list_content_padding"
-        android:weightSum="3">
-
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/frame_big_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="4.236:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frame_big_1"
+        android:layout_marginTop="@dimen/news_list_content_padding"
+        android:background="#FFF">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
         <ImageView
-            android:id="@+id/img_comment_like2"
+            android:id="@+id/news_image_2"
             android:layout_width="0dp"
-            android:layout_height="18dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_like" />
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/pluto"
+            app:layout_constraintDimensionRatio="1.618:1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
         <TextView
-            android:id="@+id/btn_comment_reply2"
+            android:id="@+id/news_title_2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Trả lời"
-            android:textColor="@color/colorAccent"
-            android:textAlignment="center"/>
-        <ImageView
-            android:id="@+id/img_comment_dislike2"
+            android:paddingLeft="@dimen/news_list_half_padding"
+            android:paddingRight="@dimen/news_list_half_padding"
+            android:text="Bí mật hình trái tim khổng lồ trên sao diêm vương"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/news_image_2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/news_category_2"
             android:layout_width="0dp"
-            android:layout_height="18dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_dislike_empty" />
-    </LinearLayout>
-    </LinearLayout>
-</LinearLayout>
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/news_list_half_padding"
+            android:paddingRight="@dimen/news_list_half_padding"
+            android:text="Vũ trụ"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/news_image_2"
+            app:layout_constraintEnd_toStartOf="@id/news_date_2"/>
+        <TextView
+            android:id="@+id/news_date_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/news_list_half_padding"
+            android:paddingRight="@dimen/news_list_half_padding"
+            android:text="1 ngày"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/news_category_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/frame_big_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="4.236:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/news_list_content_padding"
+        app:layout_constraintTop_toBottomOf="@id/frame_big_2"
+        android:background="#FFF">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <ImageView
+            android:id="@+id/news_image_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/lightning"
+            app:layout_constraintDimensionRatio="1.618:1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/news_title_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/news_list_half_padding"
+            android:paddingRight="@dimen/news_list_half_padding"
+            android:text="Tại sao có hiện tượng sấm chớp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/news_image_3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/news_category_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/news_list_half_padding"
+            android:paddingRight="@dimen/news_list_half_padding"
+            android:text="Khoa học"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/news_image_3"
+            app:layout_constraintEnd_toStartOf="@id/news_date_3"/>
+        <TextView
+            android:id="@+id/news_date_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/news_list_half_padding"
+            android:paddingRight="@dimen/news_list_half_padding"
+            android:text="2 ngày"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/news_category"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
