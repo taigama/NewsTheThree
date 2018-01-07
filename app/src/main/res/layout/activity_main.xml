@@ -119,6 +119,7 @@
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/ic_info"/>
                 <TextView
+                    android:id="@+id/txt_about"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:text="Về chúng tôi..."
@@ -130,7 +131,8 @@
                     android:paddingBottom="@dimen/news_list_content_padding"
                     android:layout_marginBottom="@dimen/news_list_content_padding"
                     android:layout_marginTop="@dimen/news_list_content_padding"
-                    android:layout_marginRight="@dimen/news_list_content_padding"/>
+                    android:layout_marginRight="@dimen/news_list_content_padding"
+                    android:textColor="#00F"/>
             </LinearLayout>
 
             <LinearLayout
@@ -145,6 +147,7 @@
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/ic_star"/>
                 <TextView
+                    android:id="@+id/txt_bookmark"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:text="Tin đã lưu..."
@@ -156,7 +159,8 @@
                     android:paddingBottom="@dimen/news_list_content_padding"
                     android:layout_marginBottom="@dimen/news_list_content_padding"
                     android:layout_marginTop="@dimen/news_list_content_padding"
-                    android:layout_marginRight="@dimen/news_list_content_padding"/>
+                    android:layout_marginRight="@dimen/news_list_content_padding"
+                    android:textColor="#00F"/>
             </LinearLayout>
 
             <LinearLayout
@@ -171,6 +175,7 @@
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/ic_notifications_empty"/>
                 <TextView
+                    android:id="@+id/txt_get_noti"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:text="Nhận thông báo"
@@ -182,7 +187,8 @@
                     android:paddingBottom="@dimen/news_list_content_padding"
                     android:layout_marginBottom="@dimen/news_list_content_padding"
                     android:layout_marginTop="@dimen/news_list_content_padding"
-                    android:layout_marginRight="@dimen/news_list_content_padding"/>
+                    android:layout_marginRight="@dimen/news_list_content_padding"
+                    android:textColor="#00F"/>
             </LinearLayout>
 
 

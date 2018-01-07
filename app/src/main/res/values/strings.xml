@@ -57,11 +57,9 @@
         \nNguyễn Công Hoan
     </string>
     <string name="about_team">
-        \nNhóm 3:
-        \nNguyễn Phương Nguyên - 14520601
-        \nNguyễn Thanh Nam - 14520556
-        \nĐinh Hoàng Khang - 14520404
-        \n
+        \nNhóm 3:\n
+        Nguyễn Thanh Nam - 14520556\n
+        Đinh Hoàng Khang - 14520404
     </string>
     <string name="title_activity_category">CategoryActivity</string>
     <string name="large_text">

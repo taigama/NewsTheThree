@@ -1,10 +1,12 @@
 package nhom3.i12.se215.uit.newsthethree;
 
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class AboutActivity extends AppCompatActivity {
@@ -29,6 +31,11 @@ public class AboutActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
+        TextView t = (TextView) findViewById(R.id.txt_forgotten);
+        t.setPaintFlags(t.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
     }
 
     @Override

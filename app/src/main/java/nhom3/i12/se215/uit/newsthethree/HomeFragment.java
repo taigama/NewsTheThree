@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class HomeFragment extends Fragment {
@@ -20,7 +21,7 @@ public class HomeFragment extends Fragment {
         // Required empty public constructor
     }
 
-    ArrayList<ItemNewsList> mNewItems;
+    ArrayList<ItemNewsList> mNewItems = new ArrayList<>();
     RecyclerView mRecyclerView;
     NewsListAdapter mAdapter;
     RecyclerView.LayoutManager mLayoutManager;
@@ -62,8 +63,6 @@ public class HomeFragment extends Fragment {
     }
 
     public void addData(String title, String category, String overview, int idImage, ItemNewsList.TYPE type) {
-        if(mNewItems == null)
-            mNewItems = new ArrayList<>();
 
         mNewItems.add(new ItemNewsList(title, category, overview, idImage, type));
     }
@@ -75,10 +74,11 @@ public class HomeFragment extends Fragment {
 
     public void ClearData()
     {
-        if(mNewItems == null)
-            mNewItems = new ArrayList<>();
-        else
             mNewItems.clear();
+    }
+
+    public void shuffle(){
+        Collections.shuffle(mNewItems);
     }
 
     public void ScrollDown()

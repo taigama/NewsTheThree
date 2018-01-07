@@ -68,7 +68,15 @@ public class BookmarkActivity extends AppCompatActivity {
         mFragmentHome.addData("\'Luật cho dân có khác luật cho cán bộ?\'"
                 , "Thời sự"
                 , "", R.drawable.news_luatdan_canbo, ItemNewsList.TYPE.TAIL);
+        mFragmentHome.addData(
+                "Học sinh Mỹ được dạy phân biệt tin thật - giả"
+                , "nhịp sống trẻ", ""
+                , R.drawable.tin_gia, ItemNewsList.TYPE.TAIL);
+        mFragmentHome.addData("Đèn đỏ rẽ phải không được, đâm người trọng thương"
+            , "Pháp luật"
+            , "", R.drawable.news_dendo_rephai, ItemNewsList.TYPE.TAIL);
 
+        mFragmentHome.shuffle();
         mFragmentHome.NotifyDataSetChanged();
     }
 }

@@ -65,6 +65,15 @@
                 android:text="@string/about_team"
                 android:textAlignment="textEnd"
                 android:textSize="@dimen/news_list_title_size"/>
+
+            <!-- the forgotten -->
+            <TextView
+                android:id="@+id/txt_forgotten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nguyễn Phương Nguyên - 14520601"
+                android:textAlignment="textEnd"
+                android:textSize="@dimen/news_list_title_size" />
         </LinearLayout>
     </ScrollView>
 

@@ -104,6 +104,20 @@ public class SearchActivity extends AppCompatActivity {
         mFragmentHome.addData("\'Luật cho dân có khác luật cho cán bộ?\'"
                 , "Thời sự"
                 , "", R.drawable.news_luatdan_canbo, ItemNewsList.TYPE.TAIL);
+        mFragmentHome.addData(
+                "Học sinh Mỹ được dạy phân biệt tin thật - giả"
+                , "nhịp sống trẻ", ""
+                , R.drawable.tin_gia, ItemNewsList.TYPE.TAIL);
+        mFragmentHome.addData(
+                "Vẽ khủng long như thật trên màng nhựa trong suốt"
+                , "nhịp sống trẻ", ""
+                , R.drawable.ve_khung_long, ItemNewsList.TYPE.TAIL);
+        mFragmentHome.addData(
+                "Người trẻ gửi ảnh nhạy cảm: không phải chuyện tồi tệ?"
+                , "nhịp sống trẻ", ""
+                , R.drawable.anh_khoa_than, ItemNewsList.TYPE.TAIL);
+
+        mFragmentHome.shuffle();
 
         mFragmentHome.NotifyDataSetChanged();
     }

@@ -2,6 +2,7 @@ package nhom3.i12.se215.uit.newsthethree;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 //import android.app.Fragment;
@@ -16,6 +17,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -161,6 +165,16 @@ public class MainActivity extends AppCompatActivity {
         // endregion
 
 
+
+
+        TextView txtBookmark = (TextView) findViewById(R.id.txt_bookmark);
+        TextView txtAbout = (TextView) findViewById(R.id.txt_about);
+        TextView txtGetNoti = (TextView) findViewById(R.id.txt_get_noti);
+
+        txtBookmark.setPaintFlags(txtBookmark.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        txtAbout.setPaintFlags(txtAbout.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        txtGetNoti.setPaintFlags(txtGetNoti.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+
     }
 
     // region HAMBURGER
@@ -181,9 +195,9 @@ public class MainActivity extends AppCompatActivity {
     private void fakeData()
     {
         // region HOME
-        mFragmentHome.addData("Vào lúc 3 giờ sáng hôm nay (20/10), siêu bão Conga bắt đầu đổ bộ vào đất liền"
+        mFragmentHome.addData("Philippines: 240 người chết vì bão Tembin"
                 , "Tin giờ chót"
-                , "Siêu bão Conga mạnh cấp 20, gió giật cấp 20, vùng gần tâm bão giật cấp 25 đang tàn phá khắp mọi miền đất nước"
+                , "Bão Tembin đổ bộ Philippines gây lở đất và lụt ở miền nam nước này, làm ít nhất 240 người chết, hàng chục người mất tích."
                 , R.drawable.news_sieubao, ItemNewsList.TYPE.HEAD);
 
         mFragmentHome.addData("Một lần nữa Apple phải hướng dẫn cách sử dụng iPhone"
