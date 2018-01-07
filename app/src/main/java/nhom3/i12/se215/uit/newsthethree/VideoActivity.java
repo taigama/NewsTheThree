@@ -1,5 +1,7 @@
 package nhom3.i12.se215.uit.newsthethree;
 
+import android.content.Context;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -16,6 +18,9 @@ public class VideoActivity extends AppCompatActivity {
     VideoView mVideoView;
     MediaController mMediaController;
 
+    Context mContext;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,11 +36,29 @@ public class VideoActivity extends AppCompatActivity {
             }
         });
 
+        mContext = this;
 
         mVideoView = (VideoView)findViewById(R.id.view_video);
+        mVideoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setOnVideoSizeChangedListener(new MediaPlayer.OnVideoSizeChangedListener() {
+                    @Override
+                    public void onVideoSizeChanged(MediaPlayer mp, int width, int height) {
+                /*
+                 * add media controller
+                 */
+                        mMediaController = new MediaController(mContext);
+                        mVideoView.setMediaController(mMediaController);
+                /*
+                 * and set its position on screen
+                 */
+                        mMediaController.setAnchorView(mVideoView);
+                    }
+                });
+            }
+        });
 
-
-        mMediaController = new MediaController(this);
 
         setTitle("");
 
@@ -47,8 +70,6 @@ public class VideoActivity extends AppCompatActivity {
         String videoPath = "android.resource://nhom3.i12.se215.uit.newsthethree/" + R.raw.ngontay;
         Uri uri = Uri.parse(videoPath);
         mVideoView.setVideoURI(uri);
-        mVideoView.setMediaController(mMediaController);
-        mMediaController.setAnchorView(mVideoView);
         mVideoView.start();
     }
 }

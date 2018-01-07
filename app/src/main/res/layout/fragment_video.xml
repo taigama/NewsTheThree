@@ -95,7 +95,7 @@
                         android:layout_height="wrap_content"
                         android:textColor="#FFF"
                         android:textSize="20sp"
-                        android:text="      1:30"
+                        android:text="      3:13"
                         android:paddingRight="@dimen/news_list_content_padding"/>
                 </FrameLayout>
             </android.support.constraint.ConstraintLayout>
