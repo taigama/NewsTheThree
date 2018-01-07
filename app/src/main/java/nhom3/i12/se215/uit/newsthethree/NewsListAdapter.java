@@ -32,10 +32,13 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.DataVi
     @Override
     public int getItemViewType(int position) {
 
-        if(mNewsItems.get(position).mType == ItemNewsList.TYPE.HEAD) {
-            return 1;
-        } else {
-            return 2;
+        switch (mNewsItems.get(position).mType) {
+            case HEAD:
+                return 1;
+            case TAIL:
+                return 2;
+            default:
+                return 0;
         }
     }
 
@@ -43,13 +46,18 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.DataVi
     public DataViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View view;
-        if(viewType == 1) {
-            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.news_list_hot, parent, false);
-        }
-        else {
-            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.news_list_item, parent, false);
-        }
 
+        switch (viewType){
+            case 1:
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.news_list_hot, parent, false);
+                break;
+            case 2:
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.news_list_item, parent, false);
+                break;
+            default:
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.news_list_item_empty, parent, false);
+                break;
+        }
         return new DataViewHolder(view);
     }
 

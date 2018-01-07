@@ -79,7 +79,7 @@ public class SearchActivity extends AppCompatActivity {
 
         mFragmentHome.addData(""
                 , ""
-                , "", 0, ItemNewsList.TYPE.TAIL);
+                , "", 0, ItemNewsList.TYPE.EMPTY);
         mFragmentHome.NotifyDataSetChanged();
     }
 

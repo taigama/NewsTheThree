@@ -4,7 +4,8 @@ public class ItemNewsList {
     public enum TYPE
     {
         HEAD,
-        TAIL
+        TAIL,
+        EMPTY
     }
 
     // title of the news_list_item
